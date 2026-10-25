@@ -86,7 +86,7 @@ export default function Home() {
                   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⢠⣶⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
             `.replace(/^[ \t]+/gm, "")}</pre> */}
 
-            <div className="absolute left-[2rem] top-[6rem] z-0">  
+            <div className="absolute ml-[0rem] mt-[-1rem] z-0">  
                 <Image
                     src="/Background_Spiral.svg"
                     alt=""
@@ -97,7 +97,7 @@ export default function Home() {
                 />
             </div>
 
-            <div className="absolute left-[6rem] top-[15rem] z-10">
+            <div className="absolute ml-[4rem] mt-[7rem] z-10">
                 <Image
                     src="/Purple_Sky.jpg"
                     alt="Purple Sky Photo"
@@ -108,7 +108,7 @@ export default function Home() {
                 />
             </div>
 
-            <div className="absolute left-[17rem] top-[13rem] z-20">
+            <div className="absolute ml-[15rem] mt-[4rem] z-20">
                 <Image
                     src="/Couches.jpg"
                     alt="Photo of three green coaches"
@@ -119,7 +119,7 @@ export default function Home() {
                 />
             </div>
 
-            <div className="absolute left-[40rem] top-[32rem] z-40">
+            <div className="absolute ml-[38rem] mt-[23rem] z-40">
                 <Image
                     src="/Ocean.jpg"
                     alt="Photo of two people near the ocean"
@@ -130,7 +130,7 @@ export default function Home() {
                 />
             </div>
 
-            <div className="absolute left-[29rem] top-[44rem] z-30">
+            <div className="absolute left-[29rem] mt-[33rem] z-30">
                 <Image
                     src="/Cross_Necklace.jpg"
                     alt="Photo of a person with red hair, a jacket with some pins, and a cross necklace atop a black turtleneck sweater"
@@ -140,6 +140,14 @@ export default function Home() {
                     priority
                 />
             </div>
+
+            <section className="relative top-[60rem] z-10 font-helonik mx-auto max-w-5xl px-5 text-center text-lg font-[450] tracking-normal text-black sm:px-8 sm:text-2xl md:text-3xl">
+                Splitting Rabbits is an independent creative studio exploring the aesthetics of everyday life, domesticity, and human connection at the intersection of image, text, style, and sound.
+            </section>
+
+            <section className="relative z-10 mt-[60rem] font-helonik mx-auto max-w-5xl px-5 text-center text-lg font-[450] tracking-normal text-black sm:px-8 sm:text-2xl md:text-3xl">
+                Splitting Rabbits is an independent creative studio exploring the aesthetics of everyday life, domesticity, and human connection at the intersection of image, text, style, and sound.
+            </section>
         </div>
 
         {/* <Footer /> */}
