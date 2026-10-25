@@ -1,14 +1,53 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Penman";
+  src: url("/Penman%20Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helonik";
+  src: url("/Helonik%20Font.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-family-penman: "Penman", cursive;
+  --font-family-helonik: "Helonik", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-roboto);
+  --font-penman: var(--font-family-penman);
+  --font-helonik: var(--font-family-helonik);
+  --font-weight-penman-thin: 100;
+  --font-weight-penman-extralight: 200;
+  --font-weight-penman-light: 300;
+  --font-weight-penman-regular: 400;
+  --font-weight-penman-medium: 500;
+  --font-weight-penman-semibold: 600;
+  --font-weight-penman-bold: 700;
+  --font-weight-penman-extrabold: 800;
+  --font-weight-penman-black: 900;
+  --text-penman-xs: 0.75rem;
+  --text-penman-sm: 0.875rem;
+  --text-penman-base: 1rem;
+  --text-penman-lg: 1.125rem;
+  --text-penman-xl: 1.25rem;
+  --text-penman-2xl: 1.5rem;
+  --text-penman-3xl: 1.875rem;
+  --text-penman-4xl: 2.25rem;
+  --text-penman-5xl: 3rem;
+  --text-penman-6xl: 3.75rem;
 }
 
 @media (prefers-color-scheme: dark) {
