@@ -86,13 +86,35 @@ export default function Home() {
                   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⢠⣶⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
             `.replace(/^[ \t]+/gm, "")}</pre>
 
-            <div className="absolute left-[4rem] top-[15rem]">
+            <div className="absolute left-[4rem] top-[15rem] z-10">
                 <Image
                     src="/Purple_Sky.jpg"
                     alt="Purple Sky Photo"
                     width={310}
                     height={620}
                     className="h-auto w-[clamp(220px,28vw,310px)] max-w-none object-contain"
+                    priority
+                />
+            </div>
+
+            <div className="absolute left-[15rem] top-[13rem] z-20">
+                <Image
+                    src="/Couches.jpg"
+                    alt="Photo of three green coaches"
+                    width={889}
+                    height={334}
+                    className="h-auto w-[clamp(320px,58vw,889px)] max-w-none object-contain"
+                    priority
+                />
+            </div>
+
+            <div className="absolute left-[36rem] top-[32rem] z-40">
+                <Image
+                    src="/Ocean.jpg"
+                    alt="Photo of two people near the ocean"
+                    width={555}
+                    height={416}
+                    className="h-auto w-[clamp(555px,58vw,416px)] max-w-none object-contain"
                     priority
                 />
             </div>
