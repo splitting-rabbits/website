@@ -37,54 +37,6 @@ export default function Home() {
                 Splitting Rabbits is an independent creative studio exploring the aesthetics of everyday life, domesticity, and human connection at the intersection of image, text, style, and sound.
             </section>
 
-            {/* <pre
-                aria-label="Illustration"
-                className="relative z-0 -mt-14 font-penman text-penman- text-[#69B3E7] ml-[-1em] max-w-[494px] text-left tracking-wide leading-5.5"
-            >{String.raw`
-                  ⠀⠀⠀⠀⠀⠀⠀⠀ ⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⡞⠉⠀⠉⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⢷⣀⢀⣆⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀ ⠀⠀⠀⠉⠉⣠⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   ⣤⡀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀ ⠀⠀⠀⢀⢣⡞⣡⡴⠖⠒⢶⣄⠀⠀⠀⠀⠀⠀⠙⢿⡆⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⡉⣿⠀⡏⠀⠀⠀⠀    ⠙⣇⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠁⢻⡄⣷⠀⠀⠀⢀⡀ ⡿⠆⠀⠀⠀⠀⠀⣸⠋⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠰⠮⠻⣜⢧⡀⠀⠿⠟⠁⠀⠀⠀⠀⣠⣾⢵⣇⣤⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⢯⡳⣄⠀⠀⠀⠀⠀⢀⡾⠉⠀⠀⠈⢳⠛⠂⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠻⣷⣄⠀⠀⠀⣼⠁⠀⢠⠄⠀⢈⣟⡁⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⢀⡴⣒⣩⣭⣝⣒⠮⣝⣧⣄⠀⣯⠀⠀⠹⠧⢴⡿⠄⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⣎⣼⡋⠉⠈⠉⠙⠛⠶⣽⡻⣷⣿⡀⠀⠀⠀⢈⣁⣀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⡗⣂⠀⠀⣀⡆⠀⠀⠀⠀⠈⠉⠙⠿⣆⠀⢠⡏⢁⢈⡆⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠘⠳⠭⠯⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡈⢧⡈⠉⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣆⠁⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠞⠛⠶⣄⠀⠀⢿⣆⣤⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠃⢠⠀⠀⡿⠀⠀⡸⣿⠰⠆⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠉⠉⠁⠀⡰⠃⣿⠀⠓⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠈⠙⠒⠒⠒⠋⠀⢰⢻⢀⣏⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⡴⠟⠁⠈⢙⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠋⣾⢰⡍⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⣸⠁⠀⠀⠀⠻⠟⠀⠀⠀⠀⠀⠀⠀⠀⠐⠁⣼⢇⠷⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⢿⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣟⡘⠁⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠘⢧⡀⠀⠀⠀⠙⠿⢷⣶⣤⣤⡴⠶⣫⣿⠟⡬⠁⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢦⣀⠀⠀⠀⠀⠀⠀⣀⣤⣾⡿⣇⠛⠂⠀⠀⠀⠀
-                  ⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠒⠒⠛⢋⣽⡿⡫⠶⠉⠀⠀⠀⠀⠀⠀
-                  ⠀⠃⠤⢀⡀⣀⡀⣠⡄⠠⣶⡆⣀⡤⠖⣫⣾⣿⠻⠌⠋⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠈⠀⠉⠁⠙⠁⣠⡴⠚⣁⣴⣿⠟⣥⠝⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⢀⡴⠞⠁⣠⣾⠿⣫⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⢀⡴⠋⠀⣠⣾⠟⢡⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⣰⠟⠀⣠⡾⠋⠀⠀⡿⡆⠀⢀⡶⠛⠛⢶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⣼⠃⠀⣴⠟⠀⠀⠀⢰⡇⡇⠀⠘⣇⣀⡔⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⣸⠃⠀⣼⠃⠀⠀⠀⠀⢸⡇⠘⢦⣀⠀⠀⣀⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⢀⡏⠀⢰⠃⠀⠀⡰⠀⠀⠸⣷⡀⠀⠈⠉⠉⠉⠀⠀⠀⠀⣤⠚⠉⠙⢦⡀⠀
-                  ⢸⠇⠀⢸⠀⢀⠆⡇⠀⠀⠀⢣⠳⡀⠀⠀⠀⠀⠀⠀⠀⠀⢷⣷⠄⠀⠀⠹⡄
-                  ⢸⡆⠀⢸⠀⣼⠁⣷⠀⠀⠀⠈⢧⠈⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-                  ⠀⡇⠀⠀⠀⠶⠆⠹⣷⣄⠀⠀⠈⠻⣖⢤⣀⡀⠀⠀⢀⣠⣴⡿⠀⠿⠆⣰⠇
-                  ⠀⠸⠀⠀⠀⢶⡆⠀⠀⠉⣁⠀⠀⠀⠈⠳⣄⡉⢙⢛⢛⡏⣥⠘⢗⣠⠞⠁⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⢀⣀⡀⠈⢦⠉⠓⠶⠶⠶⠒⠚⠉⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⡞⠉⠉⠙⣦⠈⢷⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠘⡄⠀⠱⠴⠞⢀⡿⠂⢸⡇⠅⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠲⠤⠤⠴⠞⠁⠀⣼⡇⣛⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⢰⡿⢡⡍⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⢠⣶⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            `.replace(/^[ \t]+/gm, "")}</pre> */}
 
             <div className="absolute ml-[0rem] mt-[-1rem] z-0">  
                 <Image
@@ -141,16 +93,38 @@ export default function Home() {
                 />
             </div>
 
-            <section className="relative top-[60rem] z-10 font-helonik mx-auto max-w-5xl px-5 text-center text-lg font-[450] tracking-normal text-black sm:px-8 sm:text-2xl md:text-3xl">
-                Splitting Rabbits is an independent creative studio exploring the aesthetics of everyday life, domesticity, and human connection at the intersection of image, text, style, and sound.
-            </section>
+            <div className="relative mt-[57rem] grid gap-10 px-8 md:grid-cols-2 md:gap-16">
+                <div>
+                    <section className="font-helonik font-bold text-left tracking-normal text-black sm:text-4xl md:text-6xl">
+                        featured
+                    </section>
 
-            <section className="relative z-10 mt-[60rem] font-helonik mx-auto max-w-5xl px-5 text-center text-lg font-[450] tracking-normal text-black sm:px-8 sm:text-2xl md:text-3xl">
-                Splitting Rabbits is an independent creative studio exploring the aesthetics of everyday life, domesticity, and human connection at the intersection of image, text, style, and sound.
-            </section>
+                    <section className="mt-[1rem] font-helonik font-bold text-left tracking-normal text-black sm:text-2xl md:text-4xl">
+                        studio trailer
+                    </section>
+
+                    <section className="mt-[1rem] font-arial text-left tracking-normal leading-6 text-black sm:text-base md:text-lg">
+                        What is Splitting Rabbits, visually speaking? How do domesticity and romance manifest into tangible images? What sound synthesizes it all? In combination with Alkaline Trio’s <em>Weak Week</em>, the following video encapsulates the frequent sights explored by the studio. Watch closely and you will catch a friendly face, a familiar film title, or even a glimpse into a future piece of set decoration.
+
+                        <br />
+                        <br />
+                        View the Studio Trailer to absorb the patterns, colors, textures, and cinematography encapsulating Splitting Rabbits.
+                    </section>
+                </div>
+
+                <iframe
+                    className="relative aspect-video w-full self-center"
+                      src={"https://youtu.be/-GMCy7zfFss"}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                />
+            </div>
+
         </div>
 
-        {/* <Footer /> */}
+        <Footer />
     </>
   );
 }
