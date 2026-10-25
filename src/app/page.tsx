@@ -37,7 +37,7 @@ export default function Home() {
                 Splitting Rabbits is an independent creative studio exploring the aesthetics of everyday life, domesticity, and human connection at the intersection of image, text, style, and sound.
             </section>
 
-            <pre
+            {/* <pre
                 aria-label="Illustration"
                 className="relative z-0 -mt-14 font-penman text-penman- text-[#69B3E7] ml-[-1em] max-w-[494px] text-left tracking-wide leading-5.5"
             >{String.raw`
@@ -84,9 +84,20 @@ export default function Home() {
                   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠲⠤⠤⠴⠞⠁⠀⣼⡇⣛⠀⠀⠀⠀⠀⠀⠀⠀⠀
                   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⢰⡿⢡⡍⠀⠀⠀⠀⠀⠀⠀⠀⠀
                   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⢠⣶⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            `.replace(/^[ \t]+/gm, "")}</pre>
+            `.replace(/^[ \t]+/gm, "")}</pre> */}
 
-            <div className="absolute left-[4rem] top-[15rem] z-10">
+            <div className="absolute left-[2rem] top-[6rem] z-0">  
+                <Image
+                    src="/Background_Spiral.svg"
+                    alt=""
+                    width={468}
+                    height={1138}
+                    aria-hidden="true"
+                    className="absolute left-0 top-0 z-0 h-auto w-[468px] max-w-none"
+                />
+            </div>
+
+            <div className="absolute left-[6rem] top-[15rem] z-10">
                 <Image
                     src="/Purple_Sky.jpg"
                     alt="Purple Sky Photo"
@@ -97,7 +108,7 @@ export default function Home() {
                 />
             </div>
 
-            <div className="absolute left-[15rem] top-[13rem] z-20">
+            <div className="absolute left-[17rem] top-[13rem] z-20">
                 <Image
                     src="/Couches.jpg"
                     alt="Photo of three green coaches"
@@ -108,13 +119,24 @@ export default function Home() {
                 />
             </div>
 
-            <div className="absolute left-[36rem] top-[32rem] z-40">
+            <div className="absolute left-[40rem] top-[32rem] z-40">
                 <Image
                     src="/Ocean.jpg"
                     alt="Photo of two people near the ocean"
                     width={555}
                     height={416}
                     className="h-auto w-[clamp(555px,58vw,416px)] max-w-none object-contain"
+                    priority
+                />
+            </div>
+
+            <div className="absolute left-[29rem] top-[44rem] z-30">
+                <Image
+                    src="/Cross_Necklace.jpg"
+                    alt="Photo of a person with red hair, a jacket with some pins, and a cross necklace atop a black turtleneck sweater"
+                    width={378}
+                    height={284}
+                    className="h-auto w-[clamp(378px,58vw,284px)] max-w-none object-contain"
                     priority
                 />
             </div>
