@@ -82,7 +82,7 @@ export default function Home() {
                 />
             </div>
 
-            <div className="absolute left-[29rem] mt-[33rem] z-30">
+            <div className="absolute left-[29rem] mt-[35rem] z-30">
                 <Image
                     src="/Cross_Necklace.jpg"
                     alt="Photo of a person with red hair, a jacket with some pins, and a cross necklace atop a black turtleneck sweater"
@@ -92,6 +92,51 @@ export default function Home() {
                     priority
                 />
             </div>
+
+            <div className="absolute left-[30rem] mt-[2rem] z-100">
+                <Image
+                    src="/Filmography.png"
+                    alt="Filmography"
+                    width={521}
+                    height={108}
+                    className="h-auto w-[clamp(521px,58vw,108px)] max-w-none object-contain"
+                    priority
+                />
+            </div>
+
+            <div className="absolute left-[32rem] mt-[24rem] z-100">
+                <Image
+                    src="/Gallery.png"
+                    alt="Gallery"
+                    width={352}
+                    height={108}
+                    className="h-auto w-[clamp(352px,58vw,108px)] max-w-none object-contain"
+                    priority
+                />
+            </div>
+
+            <div className="absolute left-[8rem] mt-[31rem] z-100">
+                <Image
+                    src="/Literature.png"
+                    alt="Literature"
+                    width={425}
+                    height={99}
+                    className="h-auto w-[clamp(425px,58vw,99px)] max-w-none object-contain"
+                    priority
+                />
+            </div>
+
+            <div className="absolute left-[35rem] mt-[46.5rem] z-100">
+                <Image
+                    src="/About.png"
+                    alt="About"
+                    width={314}
+                    height={122}
+                    className="h-auto w-[clamp(314px,58vw,122px)] max-w-none object-contain"
+                    priority
+                />
+            </div>
+            
 
             <div className="relative mt-[57rem] grid gap-10 px-8 md:grid-cols-2 md:gap-16">
                 <div>
