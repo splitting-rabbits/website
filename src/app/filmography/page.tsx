@@ -149,11 +149,14 @@ export default function Filmography() {
                     </a>
                 </div>
 
-                <h2 className="mt-[3rem] main-heading ml-[3rem]">read more</h2>
+                {/* <h2 className="mt-[3rem] main-heading ml-[3rem]">read more</h2>
                 <h3 className="sub-heading ml-[3rem]">explore the creative process and alternative posters for select works</h3>
-                <p className="base-text mt-4 ml-[3rem]">
-                    Inspired by romance and contemporary culture (always alongside an alternative soundtrack), the complete filmography of Splitting Rabbits offers a range of aesthetically driven vignettes.
+                <p className="base-text mt-6 ml-[3rem]">
+                    Into <em>You Can Take It With You</em> ⮞
                 </p>
+                <p className="base-text mt-[-2rem] ml-[3rem]">
+                    Into <em>Heart Spark Dollar Sign</em> ⮞
+                </p> */}
             </main>
             <Footer position="bottom" />
         </div>
