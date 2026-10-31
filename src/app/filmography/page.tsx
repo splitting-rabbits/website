@@ -27,7 +27,7 @@ export default function Filmography() {
                     <a className="poster-card" href="">
                         <Image 
                             className="poster-card-media" 
-                            src="" 
+                            src="/posters/poster_Angels.png" 
                             alt="" 
                             width={375} 
                             height={555} 
@@ -38,7 +38,7 @@ export default function Filmography() {
                     <a className="poster-card" href="">
                         <Image 
                             className="poster-card-media" 
-                            src="" 
+                            src="/posters/poster_CENY.png" 
                             alt="" 
                             width={375} 
                             height={555} 
@@ -48,48 +48,48 @@ export default function Filmography() {
                             we told them to (bad dog).</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_YCTIWY_alt.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">You Can Take It With You</h3>
                         <p className="poster-card-description">Work. Party. Repeat.</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_HSDS.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">Heart Spark Dollar Sign</h3>
                         <p className="poster-card-description">You&apos;re possessed with a power bigger than the pain.</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_APATDA.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">America&apos;s Pastime and The Day After</h3>
                         <p className="poster-card-description">Are you sure?</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_MissAmerica.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">Miss America</h3>
                         <p className="poster-card-description">Do what you love, and **** the rest.</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_AprilsOver.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">April&apos;s Over</h3>
                         <p className="poster-card-description">Je ne suis pas amoureuse. Je ne
                             suis pas amoureuese.</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_YCOM.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">Your Coffin or Mine?</h3>
                         <p className="poster-card-description">‘Til death do us part.</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_OriginalSin.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">Original Sin</h3>
                         <p className="poster-card-description">All can be salvaged. Shake my hand.</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_Filosofem.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">Filosofem</h3>
                         <p className="poster-card-description">Wake up.</p>
                     </a>
                     <a className="poster-card" href="">
-                        <Image className="poster-card-media" src="" alt="" width={375} height={555} />
+                        <Image className="poster-card-media" src="/posters/poster_RTTL.png" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">Return to the Lake</h3>
                         <p className="poster-card-description">It&apos;s calling me again.</p>
                     </a>
