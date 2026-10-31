@@ -1,8 +1,16 @@
 import Image from "next/image";
 
-export function Footer() {
+type FooterProps = {
+    position?: "static" | "bottom";
+};
+
+export function Footer({ position = "static" }: FooterProps) {
     return (
-        <footer className="relative overflow-x-hidden bg-[#FFF1C7]">
+        <footer className={`overflow-x-hidden bg-[#FFF1C7] ${
+            position === "bottom"
+                ? "absolute inset-x-0 bottom-0"
+                : "relative"
+        }`}>
             <div className="flex min-h-[144px] w-full items-center justify-start max-md:flex-col max-md:gap-4 max-md:px-6 max-md:py-8">
                 <div className="ml-[2rem] max-md:ml-0">
                     <Image
