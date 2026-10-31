@@ -1,14 +1,53 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Penman";
+  src: url("/Penman%20Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helonik";
+  src: url("/Helonik%20Font.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-family-penman: "Penman", cursive;
+  --font-family-helonik: "Helonik", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-roboto);
+  --font-penman: var(--font-family-penman);
+  --font-helonik: var(--font-family-helonik);
+  --font-weight-penman-thin: 100;
+  --font-weight-penman-extralight: 200;
+  --font-weight-penman-light: 300;
+  --font-weight-penman-regular: 400;
+  --font-weight-penman-medium: 500;
+  --font-weight-penman-semibold: 600;
+  --font-weight-penman-bold: 700;
+  --font-weight-penman-extrabold: 800;
+  --font-weight-penman-black: 900;
+  --text-penman-xs: 0.75rem;
+  --text-penman-sm: 0.875rem;
+  --text-penman-base: 1rem;
+  --text-penman-lg: 1.125rem;
+  --text-penman-xl: 1.25rem;
+  --text-penman-2xl: 1.5rem;
+  --text-penman-3xl: 1.875rem;
+  --text-penman-4xl: 2.25rem;
+  --text-penman-5xl: 3rem;
+  --text-penman-6xl: 3.75rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,84 +55,6 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
-@keyframes bunny-hop {
-    0% {
-        left: -20rem;
-        transform: translateY(0) rotate(0deg);
-    }
-
-    8% {
-        left: -8rem;
-        transform: translateY(-8px) rotate(-1deg);
-    }
-
-    16% {
-        left: 4rem;
-        transform: translateY(0) rotate(1deg);
-    }
-
-    24% {
-        left: 16rem;
-        transform: translateY(-16px) rotate(-2deg);
-    }
-
-    32% {
-        left: 28rem;
-        transform: translateY(0) rotate(1deg);
-    }
-
-    40% {
-        left: 40rem;
-        transform: translateY(-18px) rotate(-2deg);
-    }
-
-    48% {
-        left: 52rem;
-        transform: translateY(0) rotate(1deg);
-    }
-
-    56% {
-        left: 64rem;
-        transform: translateY(-14px) rotate(-1deg);
-    }
-
-    64% {
-        left: 76rem;
-        transform: translateY(0) rotate(1deg);
-    }
-
-    72% {
-        left: 88rem;
-        transform: translateY(-17px) rotate(-2deg);
-    }
-
-    80% {
-        left: 100rem;
-        transform: translateY(0) rotate(1deg);
-    }
-
-    88% {
-        left: 112rem;
-        transform: translateY(-13px) rotate(-1deg);
-    }
-
-    100% {
-        left: calc(100vw + 20rem);
-        transform: translateY(0) rotate(0deg);
-    }
-}
-
-.bunny-hop {
-    animation: bunny-hop 9s ease-in-out infinite;
-    will-change: left, transform;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .bunny-hop {
-        animation: none;
-    }
 }
 
 body {

@@ -1,80 +1,38 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Header() {
-    // return (
-    //     <header className="bg-white">
-    //         <div className="mx-auto flex w-full h-[140px] flex items-start justify-start">
-    //             <Image
-    //                 src="/Black_Bunny_Logo.png"
-    //                 alt="Logo"
-    //                 width={252}
-    //                 height={141}
-    //                 priority
-    //             />
-                
-    //         </div>
-    //     </header>
-    // );
+    const pathname = usePathname();
+    const links = [
+        { label: "home", href: "/" },
+        { label: "filmography", href: "/filmography" },
+        { label: "literature", href: "/literature" },
+        { label: "gallery", href: "/gallery" },
+        { label: "about", href: "/about" },
+    ];
 
     return (
-            <header className="bg-white">
-            <div className="flex md:min-h-[162px] w-full flex-col items-start gap-6 md:flex-row md:items-center md:pr-6 lg:pr-8">
-                    <Image
-                        className="mt-[8px]"
-                        src="/Black_Bunny_Logo.png"
-                        alt="Logo"
-                        width={260}
-                        height={146}
-                        priority
-                    />
-    
-                <nav
-                    aria-label="Footer navigation"
-                    className="ml-auto flex flex-wrap items-center justify-end gap-3"
-                >
-    
-                        <Image
-                            src="/Filmography.png"
-                            alt="Logo"
-                            width={140}
-                            height={140}
-                            priority
-                        />
-    
-                        <Image
-                            src="/Gallery.png"
-                            alt="Gallery"
-                            width={140}
-                            height={140}
-                            priority
-                        />
-    
-                        <Image
-                            src="/Writing Directory.png"
-                            alt="Writing Directory"
-                            width={140}
-                            height={140}
-                            priority
-                        />
-    
-                        <Image
-                            src="/Shop.png"
-                            alt="Shop"
-                            width={100}
-                            height={100}
-                            priority
-                        />
-    
-                        <Image
-                            src="/About.png"
-                            alt="About"
-                            width={100}
-                            height={100}
-                            priority
-                        />
-                    </nav>
-                </div>
-            </header>
-        );
+        <header className="absolute inset-x-0 bottom-0 z-10 bg-transparent">
+            <nav className="mx-auto grid h-28 w-full max-w-6xl grid-cols-5 items-center px-6 text-center text-2xl font-normal text-[#fff7dc] sm:text-3xl">
+                {links.map(({ label, href }) => {
+                    const isActive = pathname === href;
+
+                    return (
+                        <Link
+                            key={href}
+                            className={`transition-colors hover:text-[#69b7ed] ${
+                                isActive ? "underline underline-offset-8" : ""
+                            }`}
+                            href={href}
+                            aria-current={isActive ? "page" : undefined}
+                        >
+                            {label}
+                        </Link>
+                    );
+                })}
+            </nav>
+        </header>
+    );
 }
