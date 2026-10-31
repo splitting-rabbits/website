@@ -3,7 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function Header() {
+type HeaderProps = {
+    position?: "top" | "bottom";
+    color?: "light" | "dark";
+};
+
+export function Header({
+    position = "bottom",
+    color = "light",
+}: HeaderProps) {
     const pathname = usePathname();
     const links = [
         { label: "home", href: "/" },
@@ -14,8 +22,12 @@ export function Header() {
     ];
 
     return (
-        <header className="absolute inset-x-0 bottom-0 z-10 bg-transparent">
-            <nav className="mx-auto grid h-28 w-full max-w-6xl grid-cols-5 items-center px-6 text-center text-2xl font-normal text-[#fff7dc] sm:text-3xl">
+        <header className={`absolute inset-x-0 z-10 bg-transparent ${
+            position === "top" ? "top-0" : "bottom-0"
+        }`}>
+            <nav className={`mx-auto flex min-h-28 w-full max-w-6xl flex-wrap items-center justify-center gap-x-5 gap-y-2 px-4 py-5 text-center text-xl font-normal sm:grid sm:h-28 sm:flex-nowrap sm:gap-0 sm:px-6 sm:py-0 sm:grid-cols-5 sm:text-3xl ${
+                color === "dark" ? "text-black" : "text-[#fff7dc]"
+            }`}>
                 {links.map(({ label, href }) => {
                     const isActive = pathname === href;
 
