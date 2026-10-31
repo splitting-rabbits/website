@@ -9,7 +9,7 @@ export default function Home() {
             {/* this section houses the ocean waves image, the bunny overlay, and the header below */}
             <section className="relative box-border h-[calc(100vh+7rem)] w-full max-w-full overflow-hidden max-md:h-[38rem]">
                 <Image
-                    src="/waves_background.jpg"
+                    src="/photos/waves_background.jpg"
                     alt="Ocean Waves on the Beach"
                     fill
                     sizes="100vw"
@@ -19,7 +19,7 @@ export default function Home() {
 
                 <div className="absolute inset-x-0 top-0 flex h-screen items-center justify-center max-md:left-1/2 max-md:right-auto max-md:w-full max-md:-translate-x-1/2">
                     <Image
-                        src="/Black_Bunny_Logo.png"
+                        src="/logos/Black_Bunny_Logo.png"
                         alt="Splitting Rabbits Logo Overlay"
                         width={654}
                         height={654}
@@ -41,7 +41,7 @@ export default function Home() {
 
                     <div className="relative mt-10 flex flex-col items-center gap-7">
                         <Image
-                            src="/Background_Spiral.svg"
+                            src="/elements/Background_Spiral.svg"
                             alt=""
                             width={468}
                             height={1138}
@@ -51,7 +51,7 @@ export default function Home() {
 
                         <Link href="/literature" className="group relative z-10 w-[72%]">
                             <Image
-                                src="/Purple_Sky.jpg"
+                                src="/photos/Purple_Sky.jpg"
                                 alt="Purple Sky Photo"
                                 width={310}
                                 height={620}
@@ -61,7 +61,7 @@ export default function Home() {
                         </Link>
                         <Link href="/filmography" className="group relative z-10 w-[72%]">
                             <Image
-                                src="/Couches.jpg"
+                                src="/photos/Couches.jpg"
                                 alt="Photo of three green couches"
                                 width={889}
                                 height={334}
@@ -71,7 +71,7 @@ export default function Home() {
                         </Link>
                         <Link href="/gallery" className="group relative z-10 w-[72%]">
                             <Image
-                                src="/Ocean.jpg"
+                                src="/photos/Ocean.jpg"
                                 alt="Photo of two people near the ocean"
                                 width={555}
                                 height={416}
@@ -81,7 +81,7 @@ export default function Home() {
                         </Link>
                         <Link href="/about" className="group relative z-10 w-[72%]">
                             <Image
-                                src="/Cross_Necklace.jpg"
+                                src="/photos/Cross_Necklace.jpg"
                                 alt="Photo of a person with red hair wearing a cross necklace"
                                 width={378}
                                 height={284}
@@ -116,7 +116,7 @@ export default function Home() {
 
                     <div className="absolute ml-[0rem] mt-[-1rem] z-0">
                         <Image
-                            src="/Background_Spiral.svg"
+                            src="/elements/Background_Spiral.svg"
                             alt=""
                             width={468}
                             height={1138}
@@ -127,7 +127,7 @@ export default function Home() {
 
                     <Link href="/literature" className="absolute ml-[4rem] mt-[7rem] z-10">
                         <Image
-                            src="/Purple_Sky.jpg"
+                            src="/photos/Purple_Sky.jpg"
                             alt="Purple Sky Photo"
                             width={310}
                             height={620}
@@ -138,7 +138,7 @@ export default function Home() {
 
                     <Link href="/filmography" className="absolute ml-[15rem] mt-[4rem] z-20">
                         <Image
-                            src="/Couches.jpg"
+                            src="/photos/Couches.jpg"
                             alt="Photo of three green coaches"
                             width={889}
                             height={334}
@@ -149,7 +149,7 @@ export default function Home() {
 
                     <Link href="/gallery" className="absolute ml-[38rem] mt-[23rem] z-40">
                         <Image
-                            src="/Ocean.jpg"
+                            src="/photos/Ocean.jpg"
                             alt="Photo of two people near the ocean"
                             width={555}
                             height={416}
@@ -160,7 +160,7 @@ export default function Home() {
 
                     <Link href="/about" className="absolute left-[29rem] mt-[35rem] z-30">
                         <Image
-                            src="/Cross_Necklace.jpg"
+                            src="/photos/Cross_Necklace.jpg"
                             alt="Photo of a person with red hair, a jacket with some pins, and a cross necklace atop a black turtleneck sweater"
                             width={378}
                             height={284}
@@ -171,7 +171,7 @@ export default function Home() {
 
                     <Link href="/filmography" className="absolute left-[30rem] mt-[2rem] z-100">
                         <Image
-                            src="/Filmography.png"
+                            src="/elements/Filmography.png"
                             alt="Filmography"
                             width={521}
                             height={108}
@@ -182,7 +182,7 @@ export default function Home() {
 
                     <Link href="/gallery" className="absolute left-[32rem] mt-[24rem] z-100">
                         <Image
-                            src="/Gallery.png"
+                            src="/elements/Gallery.png"
                             alt="Gallery"
                             width={352}
                             height={108}
@@ -193,7 +193,7 @@ export default function Home() {
 
                     <Link href="/literature" className="absolute left-[8rem] mt-[31rem] z-100">
                         <Image
-                            src="/Literature.png"
+                            src="/elements/Literature.png"
                             alt="Literature"
                             width={425}
                             height={99}
@@ -204,7 +204,7 @@ export default function Home() {
 
                     <Link href="/about" className="absolute left-[35rem] mt-[46.5rem] z-100">
                         <Image
-                            src="/About.png"
+                            src="/elements/About.png"
                             alt="About"
                             width={314}
                             height={122}

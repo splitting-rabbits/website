@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Penman";
-    src: url("/Penman_Regular.ttf") format("truetype");
+    src: url("/fonts/Penman_Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "Arial";
-    src: url("/Arial_Regular.ttf") format("truetype");
+    src: url("/fonts/Arial_Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "Helonik";
-    src: url("/Helonik_Regular.ttf") format("truetype");
+    src: url("/fonts/Helonik_Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
     font-family: "Helonik";
-    src: url("/Helonik_Bold.ttf") format("truetype");
+    src: url("/fonts/Helonik_Bold.ttf") format("truetype");
     font-style: bold;
     font-weight: 700;
     font-display: swap;

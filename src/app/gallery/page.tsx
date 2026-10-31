@@ -8,7 +8,7 @@ export default function Gallery() {
             <Header position="top" color="dark" />
             <main className="min-h-screen bg-[#FFF1C7] px-6 py-32 text-center text-black">
                 <Image
-                    src="/Under_Construction.png"
+                    src="/logos/Under_Construction.png"
                     alt="Page under construction"
                     width={500}
                     height={500}

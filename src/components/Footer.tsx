@@ -14,7 +14,7 @@ export function Footer({ position = "static" }: FooterProps) {
             <div className="flex min-h-[144px] w-full items-center justify-start max-md:flex-col max-md:gap-4 max-md:px-6 max-md:py-8">
                 <div className="ml-[2rem] max-md:ml-0">
                     <Image
-                        src="/Bunny.png"
+                        src="/logos/Bunny.png"
                         alt="Splitting Rabbits Logo Overlay"
                         width={231}
                         height={130}
@@ -39,7 +39,7 @@ export function Footer({ position = "static" }: FooterProps) {
                         aria-label="Splitting Rabbits on YouTube"
                     >
                         <Image
-                            src="/YouTube.png"
+                            src="/logos/YouTube.png"
                             alt=""
                             width={96}
                             height={96}
@@ -53,7 +53,7 @@ export function Footer({ position = "static" }: FooterProps) {
                         aria-label="Splitting Rabbits on LinkedIn"
                     >
                         <Image
-                            src="/LinkedIn.png"
+                            src="/logos/LinkedIn.png"
                             alt=""
                             width={71}
                             height={68}
@@ -67,7 +67,7 @@ export function Footer({ position = "static" }: FooterProps) {
                         aria-label="Splitting Rabbits on Instagram"
                     >
                         <Image
-                            src="/Instagram.png"
+                            src="/logos/Instagram.png"
                             alt=""
                             width={100}
                             height={100}

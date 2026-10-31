@@ -16,7 +16,7 @@ export default function Filmography() {
                     <a className="poster-card" href="https://youtu.be/2fQlQpzLKr4">
                         <Image
                             className="poster-card-media"
-                            src="/poster_Nelson.png"
+                            src="/posters/poster_Nelson.png"
                             alt="3739 Nelson Street (Late at Night) poster"
                             width={375}
                             height={555}
