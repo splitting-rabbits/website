@@ -43,7 +43,7 @@ export default function Filmography() {
                             width={375} 
                             height={555} 
                         />
-                        <h3 className="poster-card-title">Clark's End, New York</h3>
+                        <h3 className="poster-card-title">Clark&apos;s End, New York</h3>
                         <p className="poster-card-description">Whole years refuse to stay where
                             we told them to (bad dog).</p>
                     </a>
@@ -55,11 +55,11 @@ export default function Filmography() {
                     <a className="poster-card" href="">
                         <Image className="poster-card-media" src="" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">Heart Spark Dollar Sign</h3>
-                        <p className="poster-card-description">You're possessed with a power bigger than the pain.</p>
+                        <p className="poster-card-description">You&apos;re possessed with a power bigger than the pain.</p>
                     </a>
                     <a className="poster-card" href="">
                         <Image className="poster-card-media" src="" alt="" width={375} height={555} />
-                        <h3 className="poster-card-title">America's Pastime and The Day After</h3>
+                        <h3 className="poster-card-title">America&apos;s Pastime and The Day After</h3>
                         <p className="poster-card-description">Are you sure?</p>
                     </a>
                     <a className="poster-card" href="">
@@ -69,7 +69,7 @@ export default function Filmography() {
                     </a>
                     <a className="poster-card" href="">
                         <Image className="poster-card-media" src="" alt="" width={375} height={555} />
-                        <h3 className="poster-card-title">April's Over</h3>
+                        <h3 className="poster-card-title">April&apos;s Over</h3>
                         <p className="poster-card-description">Je ne suis pas amoureuse. Je ne
                             suis pas amoureuese.</p>
                     </a>
@@ -91,7 +91,7 @@ export default function Filmography() {
                     <a className="poster-card" href="">
                         <Image className="poster-card-media" src="" alt="" width={375} height={555} />
                         <h3 className="poster-card-title">Return to the Lake</h3>
-                        <p className="poster-card-description">It's calling me again.</p>
+                        <p className="poster-card-description">It&apos;s calling me again.</p>
                     </a>
                 </div>
 
