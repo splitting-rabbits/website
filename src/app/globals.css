@@ -1,48 +1,47 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Penman";
-  src: url("/Penman_Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: url("/Arial_Regular.ttf") format("truetype");
+    font-family: "Penman";
+    src: url("/fonts/Penman_Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
-  font-family: "Helonik";
-  src: url("/Helonik_Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+    font-family: "Arial";
+    src: url("/fonts/Arial_Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Helonik";
-    src: url("/Helonik_Bold.ttf") format("truetype");
+    src: url("/fonts/Helonik_Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Helonik";
+    src: url("/fonts/Helonik_Bold.ttf") format("truetype");
     font-style: bold;
     font-weight: 700;
     font-display: swap;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-family-penman: "Penman", cursive;
-  --font-family-helonik: "Helonik", sans-serif;
+    --background: #ffffff;
+    --foreground: #171717;
+    --font-family-penman: "Penman", cursive;
+    --font-family-helonik: "Helonik", sans-serif;
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-roboto);
     --font-penman: var(--font-family-penman);
     --font-helonik: var(--font-family-helonik);
     --font-weight-penman-thin: 100;
@@ -83,27 +82,107 @@
     --text-helonik-4xl: 2.25rem;
     --text-helonik-5xl: 3rem;
     --text-helonik-6xl: 3.75rem;
-    
+
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (max-width: 767px) {
-  html,
-  body {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+}
+
+.main-heading {
+    /* margin-left: 0rem; */
+    font-family: var(--font-family-helonik);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.sub-heading {
+    /* margin-left: 0rem; */
+    margin-top: 0.75rem;
+    font-family: var(--font-family-helonik);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.base-text {
     width: 100%;
-    max-width: 100%;
-    overflow-x: clip;
-  }
+    max-width: 680px;
+    min-height: 90px;
+    font-family: "Arial", Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: black;
+}
+
+.poster-card {
+    display: flex;
+    width: min(100%, 375px);
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #000;
+}
+
+.poster-card-media {
+    aspect-ratio: 375 / 555;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
+
+.poster-card-title {
+    margin: 0;
+    font-family: "Arial", Arial, sans-serif;
+    font-size: 0.875rem;
+    font-style: italic;
+    line-height: 1.25;
+}
+
+.poster-card-description {
+    margin: 0;
+    font-family: "Arial", Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #69b3e7;
+}
+
+.poster-card:hover .poster-card-media,
+.poster-card:focus-visible .poster-card-media {
+    outline: 2px solid #69b3e7;
+    outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+    .main-heading {
+        font-size: 3.75rem;
+    }
+
+    .sub-heading {
+        font-size: 2rem;
+    }
+
+    .base-text {
+        font-size: 1.125rem;
+    }
 }
