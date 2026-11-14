@@ -39,59 +39,84 @@ export default function Home() {
                         Splitting Rabbits is an independent creative studio exploring the aesthetics of everyday life, domesticity, and human connection at the intersection of image, text, style, and sound.
                     </section>
 
-                    <div className="relative mt-10 flex flex-col items-center gap-7">
+                    <div className="relative mx-auto mt-8 h-[36rem] w-full max-w-[28rem]">
                         <Image
                             src="/elements/Background_Spiral.svg"
                             alt=""
                             width={468}
                             height={1138}
                             aria-hidden="true"
-                            className="pointer-events-none absolute left-1/2 top-[-1rem] z-0 h-auto w-[calc(100vw-2rem)] max-w-[468px] -translate-x-1/2"
+                            className="pointer-events-none absolute left-[0%] top-[0rem] z-0 h-[20rem] w-auto max-w-none"
                         />
 
-                        <Link href="/literature" className="group relative z-10 w-[72%]">
+                        <Link
+                            href="/literature"
+                            aria-label="Literature"
+                            className="group absolute left-[4%] top-[4%] z-10 w-[32%]"
+                        >
                             <Image
                                 src="/photos/Purple_Sky.jpg"
                                 alt="Purple Sky Photo"
                                 width={310}
                                 height={620}
-                                className="aspect-[1/1.6] h-auto w-full object-cover transition-transform group-hover:scale-[1.02]"
+                                className="h-auto w-full object-cover transition-transform group-hover:scale-[1.02]"
                             />
-                            <span className="font-penman pointer-events-none absolute bottom-2 right-2 z-20 block whitespace-nowrap text-right text-[clamp(2rem,12vw,3rem)] font-bold leading-none text-[#69B3E7] [-webkit-text-stroke:1.25px_currentColor]">literature</span>
                         </Link>
-                        <Link href="/filmography" className="group relative z-10 w-[72%]">
+                        <Link
+                            href="/filmography"
+                            aria-label="Filmography"
+                            className="group absolute left-[22%] top-[0%] z-20 w-[76%]"
+                        >
                             <Image
                                 src="/photos/Couches.jpg"
                                 alt="Photo of three green couches"
                                 width={889}
                                 height={334}
-                                className="aspect-[1.6/1] h-auto w-full object-cover transition-transform group-hover:scale-[1.02]"
+                                className="h-auto w-full object-cover transition-transform group-hover:scale-[1.02]"
                             />
-                            <span className="font-penman pointer-events-none absolute bottom-2 right-2 z-20 block whitespace-nowrap text-right text-[clamp(1.5rem,8vw,2.5rem)] font-bold leading-none text-[#69B3E7] [-webkit-text-stroke:1.25px_currentColor]">filmography</span>
                         </Link>
-                        <Link href="/gallery" className="group relative z-10 w-[72%]">
+                        <Link
+                            href="/gallery"
+                            aria-label="Gallery"
+                            className="group absolute left-[60%] top-[15%] z-40 w-[53%]"
+                        >
                             <Image
                                 src="/photos/Ocean.jpg"
                                 alt="Photo of two people near the ocean"
                                 width={555}
                                 height={416}
-                                className="aspect-[4/3] h-auto w-full object-cover transition-transform group-hover:scale-[1.02]"
+                                className="h-auto w-full object-cover transition-transform group-hover:scale-[1.02]"
                             />
-                            <span className="font-penman pointer-events-none absolute bottom-2 right-2 z-20 block whitespace-nowrap text-right text-[clamp(2.25rem,15vw,3.75rem)] font-bold leading-none text-[#69B3E7] [-webkit-text-stroke:1.25px_currentColor]">gallery</span>
                         </Link>
-                        <Link href="/about" className="group relative z-10 w-[72%]">
+                        <Link
+                            href="/about"
+                            aria-label="About"
+                            className="group absolute left-[40%] top-[30%] z-30 w-[47%]"
+                        >
                             <Image
                                 src="/photos/Cross_Necklace.jpg"
                                 alt="Photo of a person with red hair wearing a cross necklace"
                                 width={378}
                                 height={284}
-                                className="aspect-[4/3] h-auto w-full object-cover transition-transform group-hover:scale-[1.02]"
+                                className="h-auto w-full object-cover transition-transform group-hover:scale-[1.02]"
                             />
-                            <span className="font-penman pointer-events-none absolute bottom-2 right-2 z-20 block whitespace-nowrap text-right text-[clamp(2.5rem,18vw,4.5rem)] font-bold leading-none text-[#69B3E7] [-webkit-text-stroke:1.25px_currentColor]">about</span>
+                        </Link>
+
+                        <Link href="/filmography" aria-label="Filmography" className="absolute left-[37%] top-[-2%] z-50 w-[48%]">
+                            <Image src="/elements/Filmography.png" alt="Filmography" width={521} height={108} className="h-auto w-full" />
+                        </Link>
+                        <Link href="/gallery" aria-label="Gallery" className="absolute left-[47%] top-[14%] z-50 w-[38%]">
+                            <Image src="/elements/Gallery.png" alt="Gallery" width={352} height={108} className="h-auto w-full" />
+                        </Link>
+                        <Link href="/literature" aria-label="Literature" className="absolute left-[7%] top-[22%] z-50 w-[46%]">
+                            <Image src="/elements/Literature.png" alt="Literature" width={425} height={99} className="h-auto w-full" />
+                        </Link>
+                        <Link href="/about" aria-label="About" className="absolute left-[29%] top-[42%] z-50 w-[38%]">
+                            <Image src="/elements/About.png" alt="About" width={314} height={122} className="h-auto w-full" />
                         </Link>
                     </div>
 
-                    <section className="mt-14 border-t-2 border-black pt-8 font-helonik text-black" id="filmography">
+                    <section className="mt-[-14rem] border-t-2 border-black pt-8 font-helonik text-black" id="filmography">
                         <h2 className="main-heading">featured</h2>
                         <h3 className="sub-heading">studio trailer</h3>
                         <p className="base-text mt-4">
