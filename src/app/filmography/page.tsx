@@ -6,13 +6,23 @@ export default function Filmography() {
     return (
         <div className="relative min-h-screen">
             <Header position="top" color="dark" />
-            <main className="min-h-screen bg-[#FFF1C7] px-6 py-32 text-black">
-                <h2 className="main-heading ml-[3rem]">filmography</h2>
-                <h3 className="sub-heading ml-[3rem]">narrative and experimental shorts</h3>
-                <p className="base-text mt-4 ml-[3rem]">
-                    Inspired by romance and contemporary culture (always alongside an alternative soundtrack), the complete filmography of Splitting Rabbits offers a range of aesthetically driven vignettes.
-                </p>
-                <div className="mt-12 ml-[3rem] grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <main className="relative min-h-screen overflow-hidden bg-[#FFF1C7] px-6 py-32 text-black">
+                <Image
+                    src="/elements/Bunny_Dots.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width={575}
+                    height={334}
+                    className="pointer-events-none absolute right-16 top-26 z-0 hidden w-[min(50vw,575px)] max-w-none lg:block"
+                />
+                <div className="relative z-10">
+                    <h2 className="main-heading ml-[3rem]">filmography</h2>
+                    <h3 className="sub-heading ml-[3rem]">narrative and experimental shorts</h3>
+                    <p className="base-text mt-4 ml-[3rem]">
+                        Inspired by romance and contemporary culture (always alongside an alternative soundtrack), the complete filmography of Splitting Rabbits offers a range of aesthetically driven vignettes.
+                    </p>
+                </div>
+                <div className="relative z-10 mt-12 ml-[3rem] grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <a className="poster-card" href="https://youtu.be/2fQlQpzLKr4">
                         <Image
                             className="poster-card-media"
