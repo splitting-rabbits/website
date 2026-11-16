@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function About() {
     return (
-        <div className="min-h-screen bg-[#FFF1C7]">
+        <div className="relative min-h-screen bg-[#FFF1C7]">
             <Header position="top" color="dark" />
             <main className="relative max-w-none px-6 pb-12 pl-[4.5rem] pt-32 text-black lg:pr-10 lg:pt-[162px]">
                 <section className="grid items-start gap-10 lg:min-h-[548px] lg:grid-cols-[minmax(0,1fr)_323px] lg:gap-16">
