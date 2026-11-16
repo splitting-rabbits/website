@@ -1,24 +1,29 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { AboutMedia, AboutSection } from "@/components/AboutSection";
+import { AboutSection, AboutText } from "@/components/AboutSection";
+import Image from "next/image";
 
 export default function About() {
     return (
         <div className="min-h-screen bg-[#FFF1C7]">
             <Header position="top" color="dark" />
-            <main className="mx-auto max-w-[1280px] px-4 pb-12 pt-32 text-black sm:px-6 lg:px-10">
-                <section className="grid items-start gap-10 lg:grid-cols-[1fr_280px] lg:gap-16">
+            <main className="relative max-w-none px-6 pb-12 pl-[4.5rem] pt-32 text-black lg:pr-10 lg:pt-[162px]">
+                <section className="grid items-start gap-10 lg:min-h-[548px] lg:grid-cols-[minmax(0,1fr)_323px] lg:gap-16">
                     <div>
-                        <h1 className="main-heading text-5xl lowercase sm:text-6xl">
+                        <h1 className="main-heading lowercase sm:text-6xl">
                             about
                         </h1>
-                        <p className="mt-1 font-helonik text-xl font-bold sm:text-2xl">
+                        <h2 className="about-contact mt-1">
                             contact us: splittingrabbits@gmail.com
-                        </p>
-                        <p className="mt-8 font-penman text-5xl leading-[0.8] text-[#69B3E7] sm:text-7xl">
-                            meet jordan storm
-                        </p>
-                        <div className="base-text mt-5 max-w-2xl !min-h-0 space-y-5">
+                        </h2>
+                        <Image
+                            src="/elements/meet_Jordan_Storm.svg"
+                            alt="Meet Jordan Storm"
+                            width={720}
+                            height={108}
+                            className="mt-6 h-auto w-full max-w-[720px]"
+                        />
+                        <AboutText className="mt-[-1rem] !text-[1.1rem] max-w-2xl space-y-5">
                             <p>
                                 Jordan Storm founded Splitting Rabbits in 2024
                                 and currently works as a poet, artist, and
@@ -33,32 +38,38 @@ export default function About() {
                                 punk music, interpersonal relationships, and
                                 domestic life.
                             </p>
-                        </div>
+                        </AboutText>
                     </div>
-                    <AboutMedia
-                        label="portrait"
-                        src="/photos/about_portrait.png"
-                        className="aspect-[3/4] min-h-0 w-full"
-                        tone="gray"
-                    />
+                    <div className="relative aspect-[3/4] min-h-0 w-full overflow-hidden bg-[#e7e7e7] lg:absolute lg:left-[50rem] lg:top-[162px] lg:h-[548px] lg:w-[323px]">
+                        <Image
+                            src="/photos/about_portrait.jpg"
+                            alt="Portrait of Jordan Storm"
+                            fill
+                            sizes="323px"
+                            className="object-cover scale-120"
+                        />
+                    </div>
                 </section>
 
-                <section className="mt-16 sm:mt-20">
+                <section className="mt-16 sm:mt-20 lg:mt-0">
                     <h2 className="main-heading text-5xl lowercase sm:text-6xl">
                         history
                     </h2>
                     <div className="mt-6 space-y-12 sm:space-y-16">
                         <AboutSection
                             media={
-                                <AboutMedia
-                                    label="Logo 1"
-                                    src="/photos/logo_1.png"
-                                    className="aspect-[1.8/1] w-full"
-                                    tone="blue"
-                                />
+                                <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
+                                    <Image
+                                        src="/photos/logo_1.png"
+                                        alt="Splitting Rabbits logo one"
+                                        fill
+                                        sizes="(min-width: 1024px) 55vw, 100vw"
+                                        className="object-cover"
+                                    />
+                                </div>
                             }
                         >
-                            <div className="base-text !min-h-0 space-y-5">
+                            <AboutText className="space-y-5 !text-[1.05rem] max-w-1xl lg:mb-auto lg:-translate-x-12">
                                 <p>
                                     Splitting Rabbits was founded in December
                                     2024 as a local for independent art
@@ -75,24 +86,28 @@ export default function About() {
                                 </p>
                                 <p>
                                     It was kitschy and handmade and warm (see
-                                    our signature cornflower blue visual
-                                    language).
+                                    our signature cornflower blue solidified in 
+                                    HEX #7E9BED), most in line with the feeling of domesticity
+                                    and nostalgia evident in <em>Return to the Lake</em> .
                                 </p>
-                            </div>
+                            </AboutText>
                         </AboutSection>
 
                         <AboutSection
                             reverse
                             media={
-                                <AboutMedia
-                                    label="Logo 2"
-                                    src="/photos/logo_2.png"
-                                    className="aspect-[1.8/1] w-full"
-                                    tone="cream"
-                                />
+                                <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
+                                    <Image
+                                        src="/photos/logo_2.png"
+                                        alt="Splitting Rabbits logo two"
+                                        fill
+                                        sizes="(min-width: 1024px) 55vw, 100vw"
+                                        className="object-cover"
+                                    />
+                                </div>
                             }
                         >
-                            <div className="base-text !min-h-0 space-y-5">
+                            <AboutText className="space-y-5 !text-[1.05rem] max-w-1xl lg:min-h-[24.375rem] lg:w-[36rem] lg:translate-x-0">
                                 <p>
                                     With a minor summer hiatus, the quality of
                                     work changed and I did not feel much
@@ -106,66 +121,67 @@ export default function About() {
                                     A sky blue (consistently misnamed as
                                     Pantone 292, but truly HEX #62A8E5) kept
                                     the same warmth, alongside a cream-colored
-                                    off-white tone.
+                                    off-white tone. I have no idea when or where the originally intended Pantone 292 blue became a few shades darker; I apologize to all of those misled by this oversight.
                                 </p>
-                            </div>
+                            </AboutText>
                         </AboutSection>
 
                         <AboutSection
                             media={
-                                <AboutMedia
-                                    label="Logo 3"
-                                    src="/photos/logo_3.png"
-                                    className="aspect-[1.8/1] w-full"
-                                    tone="gray"
-                                />
+                                <div className="relative aspect-[1.8/1] mt-[-4rem] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
+                                    <Image
+                                        src="/photos/logo_3.png"
+                                        alt="Splitting Rabbits logo three"
+                                        fill
+                                        sizes="(min-width: 1024px) 55vw, 100vw"
+                                        className="object-cover"
+                                    />
+                                </div>
                             }
                         >
-                            <div className="base-text !min-h-0 space-y-5">
+                            <AboutText className="space-y-5 mt-[-4rem] lg:min-h-[24.375rem] lg:w-[32.125rem] !text-[1.05rem] max-w-1xl lg:-translate-x-12">
                                 <p>
-                                    A love for flat planes of color will never
-                                    seem to fade. In an effort to solidify
-                                    fonts, colors, patterns, and logos, the
-                                    brand&apos;s second summer sprouted a third
-                                    facade, sporting a new identity.
+                                    A love for flat planes of color will never seem to fade. In an effort to solidify fonts, colors, patterns, and logos, the brand&apos;s second summer sprouted a third facade, sporting now Pantone 292 (HEX #69B3E7) courtesy of the Magnetic Fields&apos; “Reno Dakota”.
                                 </p>
                                 <p>
-                                    Everything I learned about design and
-                                    Photoshop matured. There&apos;s something
-                                    noteworthy about double consonants, and the
-                                    English teacher part of my brain missed the
-                                    original play with that concept.
+                                    Everything I learned about design and photoshop matured. There&apos;s something noteworthy about double consonants, and the English teacher part of my brain missed the original play with that concept.
                                 </p>
                                 <p>
-                                    Maybe the original, cutesy warmth has
-                                    faded. Or maybe, and simply, this will look
-                                    better on a t-shirt.
+                                    Maybe the original, cutesy warmth has faded. Or, maybe, and simply, this will look better on a t-shirt.
                                 </p>
-                            </div>
+                            </AboutText>
                         </AboutSection>
                     </div>
                 </section>
 
-                <section className="mx-auto mt-16 grid max-w-[760px] gap-8 sm:mt-24 sm:grid-cols-[165px_1fr] sm:gap-10">
-                    <AboutMedia
-                        label="Purses"
-                        src="/photos/purses.png"
-                        className="aspect-square min-h-0 w-full"
-                        tone="gray"
-                    />
-                    <div className="base-text !min-h-0 space-y-5">
-                        <p>
-                            I&apos;ve become a stranger in this home. All the
-                            cups I tend to use, all that is regular, detaches
-                            itself from the front of my mind and falls by the
-                            wayside. Everything became unfamiliar.
-                        </p>
-                        <p>
-                            I remember buying this perfume, but it doesn&apos;t
-                            weigh like a piece of me when it&apos;s here in my
-                            hands.
-                        </p>
+                <section className="mx-auto mt-2 flex max-w-[311px] flex-col items-center gap-3 sm:mt-4">
+                    <div className="relative aspect-square min-h-0 w-full overflow-hidden bg-[#e7e7e7]">
+                        <Image
+                            src="/photos/purses.png"
+                            alt="Collection of purses"
+                            fill
+                            sizes="311px"
+                            className="object-cover"
+                        />
                     </div>
+                    <AboutText className="space-y-5">
+                        <p>
+                            i&apos;ve become a{" "}
+                            <span className="text-[#69B3E7]">stranger</span> in
+                            this home. 
+                        </p>
+                        <p>
+                            all the cups I tend to use, all that is{" "}
+                            <span className="text-[#69B3E7]">regular</span>,
+                            detaches itself from the front of my mind and falls by the
+                            wayside. everything became unfamiliar.
+                        </p>
+                        <p>
+                            i remember buying this perfume, but it doesn&apos;t
+                            weigh like a piece of me when it&apos;s here in my
+                            <span className="text-[#69B3E7]"> hands</span>.
+                        </p>
+                    </AboutText>
                 </section>
             </main>
             <Footer />
