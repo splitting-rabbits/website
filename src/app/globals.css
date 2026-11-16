@@ -111,8 +111,8 @@ body {
 .main-heading {
     /* margin-left: 0rem; */
     font-family: var(--font-family-helonik);
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 700;
     line-height: 1.2;
 }
 
@@ -132,6 +132,29 @@ body {
     font-family: "Arial", Arial, sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
+    color: black;
+}
+
+.about-body-text {
+    width: 100%;
+    font-family: "Arial", Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: black;
+}
+
+.about-contact {
+    width: min(760px, 100%);
+    height: 54px;
+    font-family: var(--font-inter), Arial, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0;
     color: black;
 }
 
