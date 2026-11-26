@@ -39,7 +39,7 @@ export default function Home() {
                         Splitting Rabbits is an independent creative studio exploring the aesthetics of everyday life, domesticity, and human connection at the intersection of image, text, style, and sound.
                     </section>
 
-                    <div className="relative mx-auto mt-8 h-[36rem] w-full max-w-[28rem]">
+                    <div className="relative mx-auto mt-8 h-[36rem] w-full max-w-[28rem] -translate-x-[5%]">
                         <Image
                             src="/elements/Background_Spiral.svg"
                             alt=""

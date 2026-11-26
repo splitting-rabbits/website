@@ -7,13 +7,13 @@ export default function About() {
     return (
         <div className="relative min-h-screen bg-[#FFF1C7]">
             <Header position="top" color="dark" />
-            <main className="relative max-w-none px-6 pb-12 pl-[4.5rem] pt-32 text-black lg:pr-10 lg:pt-[162px]">
-                <section className="grid items-start gap-10 lg:min-h-[548px] lg:grid-cols-[minmax(0,1fr)_323px] lg:gap-16">
-                    <div>
+            <main className="relative max-w-none px-4 pb-12 pt-24 text-black sm:px-6 sm:pl-[4.5rem] sm:pt-32 lg:pr-10 lg:pt-[162px]">
+                <section className="grid min-w-0 items-start gap-10 lg:min-h-[548px] lg:grid-cols-[minmax(0,1fr)_323px] lg:gap-16">
+                    <div className="min-w-0">
                         <h1 className="main-heading lowercase sm:text-6xl">
                             about
                         </h1>
-                        <h2 className="about-contact mt-1">
+                        <h2 className="about-contact mt-3 text-2xl sm:text-3xl">
                             contact us: splittingrabbits@gmail.com
                         </h2>
                         <Image

@@ -11,29 +11,29 @@ export function Footer({ position = "static" }: FooterProps) {
                 ? "absolute inset-x-0 bottom-0"
                 : "relative"
         }`}>
-            <div className="flex min-h-[144px] w-full items-center justify-start max-md:flex-col max-md:gap-4 max-md:px-6 max-md:py-8">
-                <div className="ml-[2rem] max-md:ml-0">
+            <div className="flex min-h-[144px] w-full items-center justify-start max-md:grid max-md:grid-cols-[auto_1fr] max-md:gap-x-3 max-md:gap-y-2 max-md:px-4 max-md:py-5">
+                <div className="ml-[2rem] max-md:row-span-1 max-md:ml-0">
                     <Image
                         src="/logos/Bunny.png"
                         alt="Splitting Rabbits Logo Overlay"
                         width={231}
                         height={130}
-                        className="object-contain"
+                        className="h-20 w-24 object-contain max-md:h-16 max-md:w-20"
                         priority
                     />
                 </div>
 
-                <div className="flex flex-col max-md:items-center">
-                    <div className="break-all text-black text-3xl max-md:text-xl">
+                <div className="flex flex-col max-md:min-w-0">
+                    <div className="break-all text-black text-3xl max-md:text-[0.95rem]">
                         splittingrabbits@gmail.com
                     </div>
 
-                    <div className="text-[#69B3E7] text-3xl max-md:text-xl">
+                    <div className="text-[#69B3E7] text-3xl max-md:text-[0.95rem]">
                         #splittingrabbits
                     </div>
                 </div>
 
-                <div className="ml-auto mr-[2rem] flex items-center gap-12 max-md:m-0 max-md:gap-5">
+                <div className="col-span-2 flex w-full items-center justify-center gap-8 max-md:mr-0 max-md:gap-8">
                     <a
                         href="https://www.youtube.com/@splittingrabbits"
                         aria-label="Splitting Rabbits on YouTube"
@@ -43,7 +43,7 @@ export function Footer({ position = "static" }: FooterProps) {
                             alt=""
                             width={96}
                             height={96}
-                            className="object-contain max-md:h-16 max-md:w-16"
+                            className="h-12 w-12 object-contain max-md:h-10 max-md:w-10"
                             priority
                         />
                     </a>
@@ -57,7 +57,7 @@ export function Footer({ position = "static" }: FooterProps) {
                             alt=""
                             width={71}
                             height={68}
-                            className="object-contain max-md:h-14 max-md:w-14"
+                            className="h-12 w-12 object-contain max-md:h-10 max-md:w-10"
                             priority
                         />
                     </a>
@@ -71,7 +71,7 @@ export function Footer({ position = "static" }: FooterProps) {
                             alt=""
                             width={100}
                             height={100}
-                            className="object-contain max-md:h-16 max-md:w-16"
+                            className="h-12 w-12 object-contain max-md:h-10 max-md:w-10"
                             priority
                         />
                     </a>
