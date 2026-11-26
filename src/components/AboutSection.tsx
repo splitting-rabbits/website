@@ -22,16 +22,16 @@ export function AboutSection({
 }: AboutSectionProps) {
     return (
         <section
-            className={`grid items-start gap-8 lg:gap-14 ${
+            className={`grid min-w-0 items-start gap-6 md:grid-cols-2 md:gap-8 xl:gap-14 ${
                 reverse
-                    ? "lg:grid-cols-[0.85fr_1.25fr]"
-                    : "lg:grid-cols-[1.25fr_0.85fr]"
+                    ? "md:grid-cols-[0.85fr_1.25fr]"
+                    : "md:grid-cols-[1.25fr_0.85fr]"
             }`}
         >
-            <div className={reverse ? "lg:order-2" : ""}>{media}</div>
+            <div className={`min-w-0 ${reverse ? "md:order-2" : ""}`}>{media}</div>
             <div
-                className={`flex h-full flex-col justify-start ${
-                    reverse ? "lg:order-1" : ""
+                className={`flex min-w-0 flex-col justify-start ${
+                    reverse ? "md:order-1" : ""
                 }`}
             >
                 {children}

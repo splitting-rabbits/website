@@ -7,13 +7,13 @@ export default function About() {
     return (
         <div className="relative min-h-screen bg-[#FFF1C7]">
             <Header position="top" color="dark" />
-            <main className="relative max-w-none px-4 pb-12 pt-24 text-black sm:px-6 sm:pl-[4.5rem] sm:pt-32 lg:pr-10 lg:pt-[162px]">
-                <section className="grid min-w-0 items-start gap-10 lg:min-h-[548px] lg:grid-cols-[minmax(0,1fr)_323px] lg:gap-16">
+            <main className="relative mx-auto max-w-7xl px-4 pb-12 pt-24 text-black sm:px-6 sm:pb-16 sm:pt-32 lg:px-8 lg:pb-24">
+                <section className="grid min-w-0 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,20rem)] lg:gap-12">
                     <div className="min-w-0">
-                        <h1 className="main-heading lowercase sm:text-6xl">
+                        <h1 className="main-heading lowercase">
                             about
                         </h1>
-                        <h2 className="about-contact mt-3 text-2xl sm:text-3xl">
+                        <h2 className="about-contact mt-3">
                             contact us: splittingrabbits@gmail.com
                         </h2>
                         <Image
@@ -21,9 +21,9 @@ export default function About() {
                             alt="Meet Jordan Storm"
                             width={720}
                             height={108}
-                            className="mt-6 h-auto w-full max-w-[720px]"
+                            className="mt-6 h-auto w-full max-w-[45rem]"
                         />
-                        <AboutText className="mt-[-1rem] !text-[1.1rem] max-w-2xl space-y-5">
+                        <AboutText className="mt-4 max-w-2xl space-y-5">
                             <p>
                                 Jordan Storm founded Splitting Rabbits in 2024
                                 and currently works as a poet, artist, and
@@ -40,7 +40,7 @@ export default function About() {
                             </p>
                         </AboutText>
                     </div>
-                    <div className="relative aspect-[3/4] min-h-0 w-full overflow-hidden bg-[#e7e7e7] lg:absolute lg:left-[50rem] lg:top-[162px] lg:h-[548px] lg:w-[323px]">
+                    <div className="relative aspect-[3/4] min-h-0 w-full max-w-[20rem] justify-self-center overflow-hidden bg-[#e7e7e7] lg:max-w-none">
                         <Image
                             src="/photos/about_portrait.jpg"
                             alt="Portrait of Jordan Storm"
@@ -51,11 +51,11 @@ export default function About() {
                     </div>
                 </section>
 
-                <section className="mt-16 sm:mt-20 lg:mt-0">
-                    <h2 className="main-heading text-5xl lowercase sm:text-6xl">
+                <section className="mt-12 sm:mt-16 lg:mt-20">
+                    <h2 className="main-heading lowercase">
                         history
                     </h2>
-                    <div className="mt-6 space-y-12 sm:space-y-16">
+                    <div className="mt-6 space-y-12 sm:space-y-16 lg:space-y-20">
                         <AboutSection
                             media={
                                 <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
@@ -69,7 +69,7 @@ export default function About() {
                                 </div>
                             }
                         >
-                            <AboutText className="space-y-5 !text-[1.05rem] max-w-1xl lg:mb-auto lg:-translate-x-12">
+                            <AboutText className="max-w-2xl space-y-5">
                                 <p>
                                     Splitting Rabbits was founded in December
                                     2024 as a local for independent art
@@ -86,9 +86,10 @@ export default function About() {
                                 </p>
                                 <p>
                                     It was kitschy and handmade and warm (see
-                                    our signature cornflower blue solidified in 
-                                    HEX #7E9BED), most in line with the feeling of domesticity
-                                    and nostalgia evident in <em>Return to the Lake</em> .
+                                    our signature cornflower blue solidified in
+                                    HEX #7E9BED), most in line with the feeling
+                                    of domesticity and nostalgia evident in{" "}
+                                    <em>Return to the Lake</em>.
                                 </p>
                             </AboutText>
                         </AboutSection>
@@ -107,7 +108,7 @@ export default function About() {
                                 </div>
                             }
                         >
-                            <AboutText className="space-y-5 !text-[1.05rem] max-w-1xl lg:min-h-[24.375rem] lg:w-[36rem] lg:translate-x-0">
+                            <AboutText className="max-w-2xl space-y-5">
                                 <p>
                                     With a minor summer hiatus, the quality of
                                     work changed and I did not feel much
@@ -128,7 +129,7 @@ export default function About() {
 
                         <AboutSection
                             media={
-                                <div className="relative aspect-[1.8/1] mt-[-4rem] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
+                                <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
                                     <Image
                                         src="/photos/logo_3.png"
                                         alt="Splitting Rabbits logo three"
@@ -139,7 +140,7 @@ export default function About() {
                                 </div>
                             }
                         >
-                            <AboutText className="space-y-5 mt-[-4rem] lg:min-h-[24.375rem] lg:w-[32.125rem] !text-[1.05rem] max-w-1xl lg:-translate-x-12">
+                            <AboutText className="max-w-2xl space-y-5">
                                 <p>
                                     A love for flat planes of color will never seem to fade. In an effort to solidify fonts, colors, patterns, and logos, the brand&apos;s second summer sprouted a third facade, sporting now Pantone 292 (HEX #69B3E7) courtesy of the Magnetic Fields&apos; “Reno Dakota”.
                                 </p>
@@ -154,8 +155,8 @@ export default function About() {
                     </div>
                 </section>
 
-                <section className="mx-auto mt-2 flex max-w-[311px] flex-col items-center gap-3 sm:mt-4">
-                    <div className="relative aspect-square min-h-0 w-full overflow-hidden bg-[#e7e7e7]">
+                <section className="mx-auto mt-12 grid max-w-4xl items-center gap-6 sm:mt-16 md:grid-cols-2 md:gap-10">
+                    <div className="relative aspect-square min-h-0 w-full max-w-[20rem] justify-self-center overflow-hidden bg-[#e7e7e7]">
                         <Image
                             src="/photos/purses.png"
                             alt="Collection of purses"

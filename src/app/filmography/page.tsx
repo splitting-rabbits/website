@@ -6,23 +6,23 @@ export default function Filmography() {
     return (
         <div className="relative min-h-screen">
             <Header position="top" color="dark" />
-            <main className="relative min-h-screen overflow-hidden bg-[#FFF1C7] px-6 py-32 text-black">
+            <main className="relative min-h-screen bg-[#FFF1C7] px-4 py-24 text-black sm:px-6 sm:py-32 lg:px-8">
                 <Image
                     src="/elements/Bunny_Dots.svg"
                     alt=""
                     aria-hidden="true"
                     width={575}
                     height={334}
-                    className="pointer-events-none absolute right-16 top-26 z-0 hidden w-[min(50vw,575px)] max-w-none lg:block"
+                    className="pointer-events-none absolute right-0 top-24 z-0 hidden h-auto w-[min(42vw,36rem)] opacity-80 lg:block"
                 />
-                <div className="relative z-10">
-                    <h2 className="main-heading ml-[3rem]">filmography</h2>
-                    <h3 className="sub-heading ml-[3rem]">narrative and experimental shorts</h3>
-                    <p className="base-text mt-4 ml-[3rem]">
+                <div className="relative z-10 mx-auto max-w-6xl">
+                    <h1 className="main-heading">filmography</h1>
+                    <h2 className="sub-heading">narrative and experimental shorts</h2>
+                    <p className="base-text mt-4">
                         Inspired by romance and contemporary culture (always alongside an alternative soundtrack), the complete filmography of Splitting Rabbits offers a range of aesthetically driven vignettes.
                     </p>
                 </div>
-                <div className="relative z-10 mt-12 ml-[3rem] grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="relative z-10 mx-auto mt-10 grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:mt-12 lg:grid-cols-3 xl:grid-cols-4">
                     <a className="poster-card" href="https://youtu.be/zWJKj8zuGFE">
                         <Image
                             className="poster-card-media"
@@ -159,14 +159,6 @@ export default function Filmography() {
                     </a>
                 </div>
 
-                {/* <h2 className="mt-[3rem] main-heading ml-[3rem]">read more</h2>
-                <h3 className="sub-heading ml-[3rem]">explore the creative process and alternative posters for select works</h3>
-                <p className="base-text mt-6 ml-[3rem]">
-                    Into <em>You Can Take It With You</em> ⮞
-                </p>
-                <p className="base-text mt-[-2rem] ml-[3rem]">
-                    Into <em>Heart Spark Dollar Sign</em> ⮞
-                </p> */}
             </main>
             <Footer position="bottom" />
         </div>

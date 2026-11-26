@@ -13,10 +13,10 @@ export default function Gallery() {
                 width={632}
                 height={1030}
                 aria-hidden="true"
-                className="pointer-events-none absolute right-[2rem] top-[48rem] z-0 hidden h-[960px] w-auto opacity-90 sm:block"
+                className="pointer-events-none absolute right-0 top-[32rem] z-0 hidden h-auto w-[min(40vw,39.5rem)] opacity-60 sm:block"
             />
-            <main className="relative max-w-none px-4 pb-12 pt-24 text-black sm:px-6 sm:pl-[4.5rem] sm:pt-32 lg:pr-10 lg:pt-[162px]">
-                <h1 className="main-heading lowercase sm:text-6xl">
+            <main className="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-24 text-black sm:px-6 sm:pb-16 sm:pt-32 lg:px-8 lg:pb-24">
+                <h1 className="main-heading lowercase">
                     gallery
                 </h1>
                 <Image
@@ -24,27 +24,27 @@ export default function Gallery() {
                     alt="collage of awesome and eclectic photos"
                     width={1326}
                     height={884}
-                    className="mt-0 h-auto w-full max-w-[1326px] sm:mt-[-10rem]"
+                    className="mt-6 h-auto w-full"
                 />
-                <section className="mt-6 max-w-[773px]" aria-labelledby="collections-heading">
+                <section className="relative z-10 mt-10" aria-labelledby="collections-heading">
                     <h2
                         id="collections-heading"
-                        className="mb-3 font-helonik text-5xl font-bold tracking-[-0.04em] sm:text-6xl"
+                        className="main-heading mb-6 lowercase"
                     >
                         collections
                     </h2>
 
-                    <div className="flex flex-col gap-8 sm:gap-3">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
                         <Link
                             href="/images/people"
-                            className="grid min-h-[180px] grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3 sm:h-[265px] sm:gap-5"
+                            className="group min-w-0"
                         >
-                            <div className="relative h-full overflow-hidden">
+                            <div className="relative aspect-[4/3] overflow-hidden">
                                 <Image
                                     src="/photos/collections/people-1.png"
                                     alt="Portrait from the People collection"
                                     fill
-                                    sizes="(max-width: 768px) 50vw, 354px"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="object-cover"
                                 />
                                 <Image
@@ -52,8 +52,7 @@ export default function Gallery() {
                                     alt="Second image from the People collection"
                                     width={229}
                                     height={172}
-                                    sizes="229px"
-                                    className="absolute left-[45%] top-[49px] object-cover"
+                                    className="absolute left-[44%] top-[18%] h-auto w-[54%] object-cover"
                                 />
                             </div>
                             <CollectionCopy title="People" />
@@ -79,8 +78,8 @@ export default function Gallery() {
 
 function CollectionCopy({ title }: { title: string }) {
     return (
-        <div className="pt-1 text-[0.7rem] italic leading-6 sm:text-sm">
-            <p>{title}</p>
+        <div className="pt-3 text-base italic leading-relaxed sm:text-lg">
+            <p className="font-semibold">{title}</p>
             <p className="font-normal not-italic text-[#69B3E7]">
                 &lsquo;Til death do us part.
             </p>
@@ -100,14 +99,14 @@ function CollectionItem({
     return (
         <Link
             href={`/images/${title.toLowerCase()}`}
-            className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3 sm:gap-5"
+            className="group min-w-0"
         >
-            <div className="relative aspect-[354/266] min-w-0 overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                     src={image}
                     alt={alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, 354px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
                 />
             </div>
