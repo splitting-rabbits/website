@@ -11,11 +11,11 @@ export function Header({
 }: HeaderProps) {
     return (
         <header
-            className={`absolute inset-x-0 z-30 bg-transparent ${
+            className={`absolute inset-x-0 z-[200] bg-transparent ${
                 position === "top" ? "top-0" : "bottom-0"
             }`}
         >
-            <Navbar position={position} color={color} />
+            <Navbar color={color} />
         </header>
     );
 }
