@@ -97,7 +97,7 @@ export function Navbar({ color }: NavbarProps) {
             >
                 <nav
                     aria-label="Primary navigation"
-                    className="hidden min-h-20 items-center justify-between gap-4 text-center text-sm font-normal md:flex lg:min-h-24 lg:text-lg xl:text-xl"
+                    className="hidden min-h-20 items-center justify-between gap-4 text-center text-sm font-normal md:flex md:text-base lg:min-h-24 lg:text-xl xl:min-h-28 xl:text-4xl"
                 >
                     {links.map(({ label, href }) => {
                         const isActive = pathname === href;

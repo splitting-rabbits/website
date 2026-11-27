@@ -15,18 +15,23 @@ export default function Gallery() {
                 aria-hidden="true"
                 className="pointer-events-none absolute right-0 top-[32rem] z-0 hidden h-auto w-[min(40vw,39.5rem)] opacity-60 sm:block"
             />
-            <main className="relative mx-auto w-full max-w-7xl px-4 pb-12 pt-24 text-black sm:px-6 sm:pb-16 sm:pt-32 lg:px-8 lg:pb-24">
-                <h1 className="main-heading lowercase">
-                    gallery
-                </h1>
-                <Image
-                    src="/photos/gallery_page_collage.png"
-                    alt="collage of awesome and eclectic photos"
-                    width={1326}
-                    height={884}
-                    className="mt-6 h-auto w-full"
-                />
-                <section className="relative z-10 mt-10" aria-labelledby="collections-heading">
+            <main className="relative mx-auto w-full max-w-[90rem] px-4 pb-12 pt-24 text-black sm:px-6 sm:pb-16 sm:pt-32 lg:px-8 lg:pb-24 xl:px-[5.375rem] xl:pt-40">
+                <section className="relative xl:h-[min(48rem,calc(61.39vw-7.25rem))]">
+                    <h1 className="main-heading lowercase xl:absolute xl:left-0 xl:top-0 xl:z-10">
+                        gallery
+                    </h1>
+                    <Image
+                        src="/photos/gallery_page_collage.png"
+                        alt="collage of awesome and eclectic photos"
+                        width={1326}
+                        height={884}
+                        className="mt-3 h-auto w-full sm:mt-4 xl:absolute xl:left-1/2 xl:top-[-7.25rem] xl:mt-0 xl:w-[calc(100%+3.625rem)] xl:max-w-[82.875rem] xl:-translate-x-1/2"
+                    />
+                </section>
+                <section
+                    className="relative z-10 mt-10 xl:mt-0"
+                    aria-labelledby="collections-heading"
+                >
                     <h2
                         id="collections-heading"
                         className="main-heading mb-6 lowercase"

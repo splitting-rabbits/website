@@ -6,7 +6,7 @@ export default function Filmography() {
     return (
         <div className="relative min-h-screen">
             <Header position="top" color="dark" />
-            <main className="relative min-h-screen bg-[#FFF1C7] px-4 py-24 text-black sm:px-6 sm:py-32 lg:px-8">
+            <main className="relative min-h-screen bg-[#FFF1C7] px-4 pt-24 pb-48 text-black sm:px-6 sm:pt-32 sm:pb-48 lg:px-8">
                 <Image
                     src="/elements/Bunny_Dots.svg"
                     alt=""
