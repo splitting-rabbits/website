@@ -7,69 +7,82 @@ export default function About() {
     return (
         <div className="relative min-h-screen bg-[#FFF1C7]">
             <Header position="top" color="dark" />
-            <main className="relative max-w-none px-6 pb-12 pl-[4.5rem] pt-32 text-black lg:pr-10 lg:pt-[162px]">
-                <section className="grid items-start gap-10 lg:min-h-[548px] lg:grid-cols-[minmax(0,1fr)_323px] lg:gap-16">
-                    <div>
-                        <h1 className="main-heading lowercase sm:text-6xl">
+            <main className="relative mx-auto max-w-[90rem] px-4 pb-12 pt-24 text-black sm:px-6 sm:pb-16 sm:pt-32 lg:px-8 lg:pb-24 xl:px-[5.375rem] xl:pt-40">
+                <section className="grid min-w-0 items-start gap-8 lg:w-[95%] lg:grid-cols-[minmax(0,2.56fr)_minmax(16rem,1fr)] lg:gap-12">
+                    <div className="min-w-0">
+                        <h1 className="main-heading lowercase">
                             about
                         </h1>
-                        <h2 className="about-contact mt-1">
+                        <h2 className="about-contact mt-3">
                             contact us: splittingrabbits@gmail.com
                         </h2>
                         <Image
                             src="/elements/meet_Jordan_Storm.svg"
                             alt="Meet Jordan Storm"
-                            width={720}
-                            height={108}
-                            className="mt-6 h-auto w-full max-w-[720px]"
+                            width={716}
+                            height={149}
+                            className="mt-6 h-auto w-full max-w-[45rem] xl:mt-4"
                         />
-                        <AboutText className="mt-[-1rem] !text-[1.1rem] max-w-2xl space-y-5">
-                            <p>
-                                Jordan Storm founded Splitting Rabbits in 2024
-                                and currently works as a poet, artist, and
-                                filmmaker earning her Master of Arts in English
-                                at UC Irvine.
-                            </p>
-                            <p>
-                                In 2026, she obtained her Bachelor of Arts
-                                <em> summa cum laude</em> in Theatre, Film, and
-                                Digital Production from UC Riverside. Her
-                                artwork frequently focuses on themes within
-                                punk music, interpersonal relationships, and
-                                domestic life.
-                            </p>
-                        </AboutText>
+                        <div className="mt-4 max-w-[45rem] xl:-mt-4">
+                            <AboutText className="flow-root max-w-[45rem]">
+                                <div className="relative float-right mb-4 ml-4 aspect-[323/548] w-[34%] max-w-[8rem] overflow-hidden bg-[#e7e7e7] lg:hidden">
+                                    <Image
+                                        src="/photos/about_portrait.jpg"
+                                        alt="Portrait of Jordan Storm"
+                                        fill
+                                        sizes="(max-width: 640px) 34vw, 8rem"
+                                        className="object-cover scale-120"
+                                    />
+                                </div>
+                                <p>
+                                    Jordan Storm founded Splitting Rabbits
+                                    in 2024 and currently works as a poet,
+                                    artist, and filmmaker earning her
+                                    Master of Arts in English at UC Irvine.
+                                </p>
+                            </AboutText>
+                            <AboutText className="mt-5">
+                                <p>
+                                    In 2026, she obtained her Bachelor of Arts
+                                    <em> summa cum laude</em> in Theatre, Film,
+                                    and Digital Production from UC Riverside.
+                                    Her artwork frequently focuses on themes
+                                    within punk music, interpersonal
+                                    relationships, and domestic life.
+                                </p>
+                            </AboutText>
+                        </div>
                     </div>
-                    <div className="relative aspect-[3/4] min-h-0 w-full overflow-hidden bg-[#e7e7e7] lg:absolute lg:left-[50rem] lg:top-[162px] lg:h-[548px] lg:w-[323px]">
+                    <div className="relative hidden aspect-[3/4] min-h-0 w-full max-w-[20rem] justify-self-center overflow-hidden bg-[#e7e7e7] lg:block lg:aspect-[323/548] lg:max-w-none">
                         <Image
                             src="/photos/about_portrait.jpg"
                             alt="Portrait of Jordan Storm"
                             fill
-                            sizes="323px"
+                            sizes="(min-width: 1024px) 25vw, 100vw"
                             className="object-cover scale-120"
                         />
                     </div>
                 </section>
 
-                <section className="mt-16 sm:mt-20 lg:mt-0">
-                    <h2 className="main-heading text-5xl lowercase sm:text-6xl">
+                <section className="mt-12 sm:mt-16 lg:mt-20 xl:-mt-6">
+                    <h2 className="main-heading lowercase">
                         history
                     </h2>
-                    <div className="mt-6 space-y-12 sm:space-y-16">
+                    <div className="mt-6 space-y-12 sm:space-y-16 lg:space-y-20 xl:mt-12 xl:space-y-[4.625rem]">
                         <AboutSection
                             media={
-                                <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
+                                <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] xl:aspect-auto xl:h-full">
                                     <Image
                                         src="/photos/logo_1.png"
                                         alt="Splitting Rabbits logo one"
                                         fill
-                                        sizes="(min-width: 1024px) 55vw, 100vw"
+                                        sizes="(min-width: 1280px) 56vw, 100vw"
                                         className="object-cover"
                                     />
                                 </div>
                             }
                         >
-                            <AboutText className="space-y-5 !text-[1.05rem] max-w-1xl lg:mb-auto lg:-translate-x-12">
+                            <AboutText className="max-w-2xl space-y-5 xl:flex-1">
                                 <p>
                                     Splitting Rabbits was founded in December
                                     2024 as a local for independent art
@@ -86,9 +99,10 @@ export default function About() {
                                 </p>
                                 <p>
                                     It was kitschy and handmade and warm (see
-                                    our signature cornflower blue solidified in 
-                                    HEX #7E9BED), most in line with the feeling of domesticity
-                                    and nostalgia evident in <em>Return to the Lake</em> .
+                                    our signature cornflower blue solidified in
+                                    HEX #7E9BED), most in line with the feeling
+                                    of domesticity and nostalgia evident in{" "}
+                                    <em>Return to the Lake</em>.
                                 </p>
                             </AboutText>
                         </AboutSection>
@@ -96,18 +110,18 @@ export default function About() {
                         <AboutSection
                             reverse
                             media={
-                                <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
+                                <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] xl:aspect-auto xl:h-full">
                                     <Image
                                         src="/photos/logo_2.png"
                                         alt="Splitting Rabbits logo two"
                                         fill
-                                        sizes="(min-width: 1024px) 55vw, 100vw"
+                                        sizes="(min-width: 1280px) 56vw, 100vw"
                                         className="object-cover"
                                     />
                                 </div>
                             }
                         >
-                            <AboutText className="space-y-5 !text-[1.05rem] max-w-1xl lg:min-h-[24.375rem] lg:w-[36rem] lg:translate-x-0">
+                            <AboutText className="max-w-2xl space-y-5 xl:flex-1">
                                 <p>
                                     With a minor summer hiatus, the quality of
                                     work changed and I did not feel much
@@ -128,18 +142,18 @@ export default function About() {
 
                         <AboutSection
                             media={
-                                <div className="relative aspect-[1.8/1] mt-[-4rem] w-full overflow-hidden bg-[#7d98e5] lg:w-[95%]">
+                                <div className="relative aspect-[1.8/1] w-full overflow-hidden bg-[#7d98e5] xl:aspect-auto xl:h-full">
                                     <Image
                                         src="/photos/logo_3.png"
                                         alt="Splitting Rabbits logo three"
                                         fill
-                                        sizes="(min-width: 1024px) 55vw, 100vw"
+                                        sizes="(min-width: 1280px) 56vw, 100vw"
                                         className="object-cover"
                                     />
                                 </div>
                             }
                         >
-                            <AboutText className="space-y-5 mt-[-4rem] lg:min-h-[24.375rem] lg:w-[32.125rem] !text-[1.05rem] max-w-1xl lg:-translate-x-12">
+                            <AboutText className="max-w-2xl space-y-5 xl:flex-1">
                                 <p>
                                     A love for flat planes of color will never seem to fade. In an effort to solidify fonts, colors, patterns, and logos, the brand&apos;s second summer sprouted a third facade, sporting now Pantone 292 (HEX #69B3E7) courtesy of the Magnetic Fields&apos; “Reno Dakota”.
                                 </p>
@@ -154,17 +168,17 @@ export default function About() {
                     </div>
                 </section>
 
-                <section className="mx-auto mt-2 flex max-w-[311px] flex-col items-center gap-3 sm:mt-4">
-                    <div className="relative aspect-square min-h-0 w-full overflow-hidden bg-[#e7e7e7]">
+                <section className="mx-auto mt-12 flex max-w-4xl flex-col items-center gap-6 sm:mt-16 md:gap-10">
+                    <div className="relative aspect-square min-h-0 w-full max-w-[19.4375rem] overflow-hidden bg-[#e7e7e7]">
                         <Image
                             src="/photos/purses.png"
                             alt="Collection of purses"
                             fill
-                            sizes="311px"
+                            sizes="(min-width: 1280px) 19.4375rem, 100vw"
                             className="object-cover"
                         />
                     </div>
-                    <AboutText className="space-y-5">
+                    <AboutText className="w-full max-w-[19.4375rem] space-y-5">
                         <p>
                             i&apos;ve become a{" "}
                             <span className="text-[#69B3E7]">stranger</span> in

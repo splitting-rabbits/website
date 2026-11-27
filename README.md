@@ -1,5 +1,36 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Literature Studio
+
+The Sanity Studio is mounted at `/studio`. Create a **Literature piece** and
+choose its section and page style:
+
+- Text-only poem
+- Poem with artwork and optional words over the artwork
+- Poem with a photo and optional words over the photo
+- Article or magazine made from ordered text and image sections
+
+The page background choices match the Literature designs: butter yellow,
+peach, lime green, soft white, and blush pink. Image uploads include an
+accessibility description, and poem/artwork/photo styles require the content
+they need before publishing. Artwork and photo poems can also set the overlay
+words' alignment, position, and color. Article sections can be reordered and
+include their own text, image, caption, and image placement. New entries are
+not preloaded; the Studio starts empty.
+
+To connect it to a Sanity project:
+
+1. Create a project at [sanity.io/manage](https://www.sanity.io/manage) and use
+   `production` as the dataset name.
+2. Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SANITY_PROJECT_ID`
+   to your project ID. Keep `NEXT_PUBLIC_SANITY_DATASET` set to `production`.
+3. Restart the Next.js app and open `/studio`.
+4. In the Sanity project settings, allow the local development origin and the
+   deployed site origin in the project's CORS settings.
+
+The project ID and dataset are public configuration values. Do not put a Sanity
+API token in a `NEXT_PUBLIC_` variable.
+
 ## Getting Started
 
 First, run the development server:

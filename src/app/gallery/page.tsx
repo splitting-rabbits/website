@@ -13,61 +13,70 @@ export default function Gallery() {
                 width={632}
                 height={1030}
                 aria-hidden="true"
-                className="pointer-events-none absolute right-[2rem] top-[48rem] z-0 h-[960px] w-auto opacity-90"
+                className="pointer-events-none absolute right-0 top-[32rem] z-0 hidden h-auto w-[min(40vw,39.5rem)] opacity-60 sm:block"
             />
-            <main className="relative max-w-none px-6 pb-16 pl-[4.5rem] pt-32 text-black lg:pr-10 lg:pt-[162px]">
-                <h1 className="main-heading lowercase sm:text-6xl">
-                    gallery
-                </h1>
-                <Image
-                    src="/photos/gallery_page_collage.png"
-                    alt="collage of awesome and eclectic photos"
-                    width={1326}
-                    height={884}
-                    className="mt-[-10rem] h-auto w-full max-w-[1326px]"
-                />
-                <section className="mt-6 max-w-[773px]" aria-labelledby="collections-heading">
+            <main className="relative mx-auto w-full max-w-[90rem] px-4 pb-12 pt-24 text-black sm:px-6 sm:pb-16 sm:pt-32 lg:px-8 lg:pb-24 xl:px-[5.375rem] xl:pt-40">
+                <section className="relative xl:h-[min(48rem,calc(61.39vw-7.25rem))]">
+                    <h1 className="main-heading lowercase xl:absolute xl:left-0 xl:top-0 xl:z-10">
+                        gallery
+                    </h1>
+                    <Image
+                        src="/photos/gallery_page_collage.png"
+                        alt="collage of awesome and eclectic photos"
+                        width={1326}
+                        height={884}
+                        className="h-auto w-full sm:mt-4 xl:absolute xl:left-1/2 xl:top-[-7.25rem] xl:mt-0 xl:w-[calc(100%+3.625rem)] xl:max-w-[82.875rem] xl:-translate-x-1/2"
+                    />
+                </section>
+                <section
+                    className="relative z-10  xl:mt-0"
+                    aria-labelledby="collections-heading"
+                >
                     <h2
                         id="collections-heading"
-                        className="mb-3 font-helonik text-5xl font-bold tracking-[-0.04em] sm:text-6xl"
+                        className="main-heading mb-6 lowercase"
                     >
                         collections
                     </h2>
 
-                    <div className="flex flex-col gap-3">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
                         <Link
-                            href="/gallery/people"
-                            className="grid h-[265px] grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-5"
+                            href="/images/people"
+                            className="group min-w-0"
                         >
-                            <div className="relative h-full overflow-hidden">
+                            <div className="relative aspect-[4/3] overflow-hidden">
                                 <Image
                                     src="/photos/collections/people-1.png"
                                     alt="Portrait from the People collection"
                                     fill
-                                    sizes="(max-width: 768px) 50vw, 354px"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="object-cover"
                                 />
                                 <Image
                                     src="/photos/collections/people-2.png"
                                     alt="Second image from the People collection"
-                                    width={229}
-                                    height={172}
-                                    sizes="229px"
-                                    className="absolute left-[45%] top-[49px] object-cover"
+                                    width={260}
+                                    height={203}
+                                    className="absolute right-0 top-[15%] h-auto w-[70%] object-cover"
                                 />
                             </div>
-                            <CollectionCopy title="People" />
+                            <CollectionCopy
+                                title="People"
+                                caption="Signs and symbols of the fact that I lived alongside many others."
+                            />
                         </Link>
 
                         <CollectionItem
                             image="/photos/collections/places.png"
                             alt="Interior from the Places collection"
                             title="Places"
+                            caption="Arranged sunsets, landscapes, skies, and natural worlds."
                         />
                         <CollectionItem
                             image="/photos/collections/things.png"
                             alt="Breakfast from the Things collection"
                             title="Things"
+                            caption="A glimpse into a series of everyday objects assembled into home."
                         />
                     </div>
                 </section>
@@ -77,12 +86,18 @@ export default function Gallery() {
     );
 }
 
-function CollectionCopy({ title }: { title: string }) {
+function CollectionCopy({
+    title,
+    caption,
+}: {
+    title: string;
+    caption: string;
+}) {
     return (
-        <div className="pt-1 text-[0.7rem] italic leading-6 sm:text-sm">
-            <p>{title}</p>
+        <div className="pt-3 text-[20px] italic leading-relaxed md:text-lg">
+            <p className="font-semibold">{title}</p>
             <p className="font-normal not-italic text-[#69B3E7]">
-                &lsquo;Til death do us part.
+                {caption}
             </p>
         </div>
     );
@@ -92,26 +107,28 @@ function CollectionItem({
     image,
     alt,
     title,
+    caption,
 }: {
     image: string;
     alt: string;
     title: string;
+    caption: string;
 }) {
     return (
         <Link
-            href={`/gallery/${title.toLowerCase()}`}
-        className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-5"
+            href={`/images/${title.toLowerCase()}`}
+            className="group min-w-0"
         >
-            <div className="relative aspect-[354/266] overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                     src={image}
                     alt={alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, 354px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
                 />
             </div>
-            <CollectionCopy title={title} />
+            <CollectionCopy title={title} caption={caption} />
         </Link>
     );
 }
