@@ -107,7 +107,7 @@ body {
 
 @media (hover: none) and (pointer: coarse) {
     .mobile-menu-control {
-        top: max(calc(env(safe-area-inset-top, 0px) + 1rem), 3.75rem);
+        top: max(calc(env(safe-area-inset-top, 0px)), 1.25rem);
     }
 }
 
