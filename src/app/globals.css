@@ -88,7 +88,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
-        --foreground: #ededed;
+        --foreground: #FFF1C7;
     }
 }
 
@@ -96,6 +96,19 @@ body {
     background: var(--background);
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile-menu-control {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 1rem);
+    left: calc(env(safe-area-inset-left, 0px) + 1rem);
+    z-index: 60;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .mobile-menu-control {
+        top: max(calc(env(safe-area-inset-top, 0px) + 1rem), 3.75rem);
+    }
 }
 
 .main-heading {
@@ -183,4 +196,17 @@ body {
 .poster-card:focus-visible .poster-card-media {
     outline: 2px solid #69b3e7;
     outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 20px;
+    }
+
+    .base-text,
+    .about-body-text,
+    .poster-card-title,
+    .poster-card-description {
+        font-size: 20px;
+    }
 }

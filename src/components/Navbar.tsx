@@ -12,29 +12,34 @@ type NavbarProps = {
 export function Navbar({ color }: NavbarProps) {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const [isHomeHeroVisible, setIsHomeHeroVisible] = useState(
+        pathname === "/",
+    );
     const links = [
-        { label: "home", href: "/", mobileImage: null },
-        {
-            label: "filmography",
-            href: "/filmography",
-            mobileImage: { src: "/elements/Filmography.png", width: 521, height: 108 },
-        },
-        {
-            label: "literature",
-            href: "/literature",
-            mobileImage: { src: "/elements/Literature.png", width: 425, height: 99 },
-        },
-        {
-            label: "gallery",
-            href: "/gallery",
-            mobileImage: { src: "/elements/Gallery.png", width: 352, height: 108 },
-        },
-        {
-            label: "about",
-            href: "/about",
-            mobileImage: { src: "/elements/About.png", width: 314, height: 122 },
-        },
+        { label: "home", href: "/" },
+        { label: "filmography", href: "/filmography" },
+        { label: "literature", href: "/literature" },
+        { label: "gallery", href: "/gallery" },
+        { label: "about", href: "/about" },
     ];
+
+    useEffect(() => {
+        if (pathname !== "/") {
+            return;
+        }
+
+        const homeHero = document.querySelector("[data-home-hero]");
+        if (!homeHero) {
+            return;
+        }
+
+        const observer = new IntersectionObserver(([entry]) => {
+            setIsHomeHeroVisible(Boolean(entry?.isIntersecting));
+        });
+        observer.observe(homeHero);
+
+        return () => observer.disconnect();
+    }, [pathname]);
 
     useEffect(() => {
         if (!isOpen) {
@@ -60,34 +65,29 @@ export function Navbar({ color }: NavbarProps) {
 
     return (
         <>
-            <div className="fixed inset-x-0 top-4 z-[60] flex justify-center md:hidden">
+            <div className="mobile-menu-control md:hidden">
                 <button
                     type="button"
-                    className="relative inline-flex min-h-11 min-w-11 items-center justify-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#69B3E7]"
+                    className="inline-flex min-h-11 min-w-11 items-center justify-center rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     aria-label={isOpen ? "Close menu" : "Open menu"}
                     aria-expanded={isOpen}
                     aria-controls="mobile-primary-navigation"
                     onClick={() => setIsOpen((open) => !open)}
                 >
-                    <span
-                        className={`absolute h-0.5 w-7 rounded transition duration-300 ${
-                            isOpen
-                                ? "rotate-45 bg-[#69B3E7]"
-                                : "-translate-y-2 bg-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.65)]"
-                        }`}
-                    />
-                    <span
-                        className={`absolute h-0.5 w-7 rounded transition duration-300 ${
-                            isOpen
-                                ? "-rotate-45 bg-[#69B3E7]"
-                                : "translate-y-2 bg-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.65)]"
-                        }`}
-                    />
-                    <span
-                        className={`absolute h-0.5 w-7 rounded bg-white transition duration-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.65)] ${
-                            isOpen ? "scale-x-0 opacity-0" : ""
-                        }`}
-                    />
+                    <span aria-hidden="true" className="grid grid-cols-3 gap-[7px]">
+                        {Array.from({ length: 9 }, (_, index) => (
+                            <span
+                                key={index}
+                                className={`h-[5px] w-[5px] rounded-full ${
+                                    pathname === "/" &&
+                                    isHomeHeroVisible &&
+                                    !isOpen
+                                        ? "bg-white"
+                                        : "bg-black"
+                                }`}
+                            />
+                        ))}
+                    </span>
                 </button>
             </div>
             <div
@@ -122,37 +122,33 @@ export function Navbar({ color }: NavbarProps) {
                 aria-label="Mobile primary navigation"
                 aria-hidden={!isOpen}
                 inert={!isOpen}
-                className={`fixed inset-0 z-40 flex min-h-dvh flex-col items-center justify-center bg-white text-[#69B3E7] transition-transform duration-500 ease-in-out md:hidden ${
+                className={`fixed inset-0 z-40 flex min-h-dvh flex-col items-center justify-center bg-[#69B3E7] text-black transition-transform duration-500 ease-in-out md:hidden ${
                     isOpen
                         ? "translate-y-0"
                         : "pointer-events-none -translate-y-full"
                 }`}
             >
-                <div className="flex flex-col items-center gap-5 px-4 sm:gap-7">
-                    {links.map(({ label, href, mobileImage }) => {
+                <Image
+                    src="/logos/Bunny.png"
+                    alt=""
+                    aria-hidden="true"
+                    width={2560}
+                    height={1440}
+                    className="pointer-events-none absolute bottom-0 left-1/2 z-0 h-auto w-[min(55vw,16rem)] -translate-x-1/2"
+                />
+                <div className="relative z-10 flex flex-col items-center gap-10 px-4 sm:gap-12">
+                    {links.map(({ label, href }) => {
                         const isActive = pathname === href;
 
                         return (
                             <Link
                                 key={href}
-                                className={`flex min-h-11 items-center px-4 text-2xl capitalize transition-colors hover:text-[#4c9bd1] sm:text-3xl ${
-                                    isActive ? "underline underline-offset-8" : ""
-                                }`}
+                                className="flex min-h-11 items-center px-4 font-helonik text-3xl font-bold lowercase transition-opacity hover:opacity-70 sm:text-4xl"
                                 href={href}
                                 aria-current={isActive ? "page" : undefined}
                                 onClick={() => setIsOpen(false)}
                             >
-                                {mobileImage ? (
-                                    <Image
-                                        src={mobileImage.src}
-                                        alt={label}
-                                        width={mobileImage.width}
-                                        height={mobileImage.height}
-                                        className="h-10 w-auto max-w-[min(70vw,16rem)] object-contain"
-                                    />
-                                ) : (
-                                    label
-                                )}
+                                {label}
                             </Link>
                         );
                     })}

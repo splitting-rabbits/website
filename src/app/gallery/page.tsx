@@ -25,11 +25,11 @@ export default function Gallery() {
                         alt="collage of awesome and eclectic photos"
                         width={1326}
                         height={884}
-                        className="mt-3 h-auto w-full sm:mt-4 xl:absolute xl:left-1/2 xl:top-[-7.25rem] xl:mt-0 xl:w-[calc(100%+3.625rem)] xl:max-w-[82.875rem] xl:-translate-x-1/2"
+                        className="h-auto w-full sm:mt-4 xl:absolute xl:left-1/2 xl:top-[-7.25rem] xl:mt-0 xl:w-[calc(100%+3.625rem)] xl:max-w-[82.875rem] xl:-translate-x-1/2"
                     />
                 </section>
                 <section
-                    className="relative z-10 mt-10 xl:mt-0"
+                    className="relative z-10  xl:mt-0"
                     aria-labelledby="collections-heading"
                 >
                     <h2
@@ -55,23 +55,28 @@ export default function Gallery() {
                                 <Image
                                     src="/photos/collections/people-2.png"
                                     alt="Second image from the People collection"
-                                    width={229}
-                                    height={172}
-                                    className="absolute left-[44%] top-[18%] h-auto w-[54%] object-cover"
+                                    width={260}
+                                    height={203}
+                                    className="absolute right-0 top-[15%] h-auto w-[70%] object-cover"
                                 />
                             </div>
-                            <CollectionCopy title="People" />
+                            <CollectionCopy
+                                title="People"
+                                caption="Signs and symbols of the fact that I lived alongside many others."
+                            />
                         </Link>
 
                         <CollectionItem
                             image="/photos/collections/places.png"
                             alt="Interior from the Places collection"
                             title="Places"
+                            caption="Arranged sunsets, landscapes, skies, and natural worlds."
                         />
                         <CollectionItem
                             image="/photos/collections/things.png"
                             alt="Breakfast from the Things collection"
                             title="Things"
+                            caption="A glimpse into a series of everyday objects assembled into home."
                         />
                     </div>
                 </section>
@@ -81,12 +86,18 @@ export default function Gallery() {
     );
 }
 
-function CollectionCopy({ title }: { title: string }) {
+function CollectionCopy({
+    title,
+    caption,
+}: {
+    title: string;
+    caption: string;
+}) {
     return (
-        <div className="pt-3 text-base italic leading-relaxed sm:text-lg">
+        <div className="pt-3 text-[20px] italic leading-relaxed md:text-lg">
             <p className="font-semibold">{title}</p>
             <p className="font-normal not-italic text-[#69B3E7]">
-                &lsquo;Til death do us part.
+                {caption}
             </p>
         </div>
     );
@@ -96,10 +107,12 @@ function CollectionItem({
     image,
     alt,
     title,
+    caption,
 }: {
     image: string;
     alt: string;
     title: string;
+    caption: string;
 }) {
     return (
         <Link
@@ -115,7 +128,7 @@ function CollectionItem({
                     className="object-cover"
                 />
             </div>
-            <CollectionCopy title={title} />
+            <CollectionCopy title={title} caption={caption} />
         </Link>
     );
 }

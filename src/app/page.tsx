@@ -87,18 +87,75 @@ function ClusterLabel({
     );
 }
 
+type MobileHomeTileProps = {
+    href: string;
+    label: string;
+    imageSrc: string;
+    artworkSrc: string;
+    artworkWidth: number;
+    artworkHeight: number;
+    artworkWidthPercent: number;
+};
+
+function MobileHomeTile({
+    href,
+    label,
+    imageSrc,
+    artworkSrc,
+    artworkWidth,
+    artworkHeight,
+    artworkWidthPercent,
+}: MobileHomeTileProps) {
+    return (
+        <Link
+            href={href}
+            aria-label={label}
+            className="group relative block aspect-[4/3] w-full overflow-hidden"
+        >
+            <Image
+                src={imageSrc}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="calc(100vw - 1.5rem)"
+                className="object-cover transition-transform group-hover:scale-[1.02]"
+            />
+            <Image
+                src={artworkSrc}
+                alt=""
+                aria-hidden="true"
+                width={artworkWidth}
+                height={artworkHeight}
+                className="absolute bottom-2 left-1/2 h-auto -translate-x-1/2"
+                style={{ width: `${artworkWidthPercent}%` }}
+            />
+        </Link>
+    );
+}
+
 export default function Home() {
     return (
         <>
-            <section className="relative h-[min(100svh,60rem)] min-h-[32rem] w-full">
-                <Image
-                    src="/photos/waves_background.jpg"
-                    alt="Ocean Waves on the Beach"
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                    priority
-                />
+            <section
+                data-home-hero
+                className="relative h-[min(100svh,60rem)] min-h-[32rem] w-full"
+            >
+                <div
+                    className="absolute inset-x-0"
+                    style={{
+                        top: "calc(0px - env(safe-area-inset-top, 0px))",
+                        height: "calc(100% + env(safe-area-inset-top, 0px))",
+                    }}
+                >
+                    <Image
+                        src="/photos/waves_background.jpg"
+                        alt="Ocean Waves on the Beach"
+                        fill
+                        sizes="100vw"
+                        className="object-cover"
+                        priority
+                    />
+                </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <Image
                         src="/logos/Black_Bunny_Logo.png"
@@ -113,14 +170,56 @@ export default function Home() {
             </section>
 
             <main className="w-full bg-[#FFF1C7] pt-12 pb-12 text-black sm:pt-16 sm:pb-16 lg:pt-6 lg:pb-24">
-                <section className="mx-auto flex min-h-0 w-full max-w-[67.3125rem] items-center justify-center px-4 text-center font-helonik text-lg font-[450] leading-relaxed sm:text-2xl lg:min-h-[10.875rem] lg:px-0 lg:text-4xl lg:font-bold lg:leading-[44px]">
+                <section className="mx-auto flex min-h-0 w-full max-w-[67.3125rem] items-center justify-center px-4 text-center font-helonik text-[20px] font-[450] leading-relaxed md:text-2xl lg:min-h-[10.875rem] lg:px-0 lg:text-4xl lg:font-bold lg:leading-[44px]">
                     Splitting Rabbits is an independent creative studio
                     exploring the aesthetics of everyday life, domesticity, and
                     human connection at the intersection of image, text, style,
                     and sound.
                 </section>
 
-                <div className="@container relative mx-auto mt-10 aspect-[4/3] w-[calc(100%-2rem)] max-w-5xl overflow-x-clip sm:mt-14 sm:aspect-[16/10] sm:w-[calc(100%-3rem)] md:aspect-[1440/1038] lg:-mt-[1.375rem] lg:aspect-[1440/1038] lg:w-full lg:max-w-[90rem]">
+                <section
+                    aria-label="Explore the site"
+                    className="mx-auto mt-10 flex w-screen max-w-5xl flex-col gap-3 px-3 lg:hidden"
+                >
+                    <MobileHomeTile
+                        href="/filmography"
+                        label="Filmography"
+                        imageSrc="/photos/Couches.jpg"
+                        artworkSrc="/elements/Filmography.png"
+                        artworkWidth={250}
+                        artworkHeight={78}
+                        artworkWidthPercent={70}
+                    />
+                    <MobileHomeTile
+                        href="/gallery"
+                        label="Gallery"
+                        imageSrc="/photos/Ocean.jpg"
+                        artworkSrc="/elements/Gallery.png"
+                        artworkWidth={165}
+                        artworkHeight={76}
+                        artworkWidthPercent={55}
+                    />
+                    <MobileHomeTile
+                        href="/about"
+                        label="About"
+                        imageSrc="/photos/Cross_Necklace.jpg"
+                        artworkSrc="/elements/About.png"
+                        artworkWidth={137}
+                        artworkHeight={47}
+                        artworkWidthPercent={42}
+                    />
+                    <MobileHomeTile
+                        href="/literature"
+                        label="Literature"
+                        imageSrc="/photos/Purple_Sky.jpg"
+                        artworkSrc="/elements/Literature.png"
+                        artworkWidth={185}
+                        artworkHeight={59}
+                        artworkWidthPercent={55}
+                    />
+                </section>
+
+                <div className="@container relative mx-auto mt-10 hidden aspect-[4/3] w-[calc(100%-2rem)] max-w-5xl overflow-x-clip sm:mt-14 sm:aspect-[16/10] sm:w-[calc(100%-3rem)] md:aspect-[1440/1038] lg:-mt-[1.375rem] lg:block lg:aspect-[1440/1038] lg:w-full lg:max-w-[90rem]">
                     <pre
                         aria-hidden="true"
                         className="pointer-events-none absolute left-[-7.5%] top-0 z-0 max-w-none whitespace-pre font-penman text-[clamp(0.25rem,1.6667cqw,1.5rem)] leading-[1.125] text-[#69B3E7]"

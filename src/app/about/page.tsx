@@ -23,24 +23,37 @@ export default function About() {
                             height={149}
                             className="mt-6 h-auto w-full max-w-[45rem] xl:mt-4"
                         />
-                        <AboutText className="mt-4 max-w-[45rem] space-y-5 xl:-mt-4">
-                            <p>
-                                Jordan Storm founded Splitting Rabbits in 2024
-                                and currently works as a poet, artist, and
-                                filmmaker earning her Master of Arts in English
-                                at UC Irvine.
-                            </p>
-                            <p>
-                                In 2026, she obtained her Bachelor of Arts
-                                <em> summa cum laude</em> in Theatre, Film, and
-                                Digital Production from UC Riverside. Her
-                                artwork frequently focuses on themes within
-                                punk music, interpersonal relationships, and
-                                domestic life.
-                            </p>
-                        </AboutText>
+                        <div className="mt-4 max-w-[45rem] xl:-mt-4">
+                            <AboutText className="flow-root max-w-[45rem]">
+                                <div className="relative float-right mb-4 ml-4 aspect-[323/548] w-[34%] max-w-[8rem] overflow-hidden bg-[#e7e7e7] lg:hidden">
+                                    <Image
+                                        src="/photos/about_portrait.jpg"
+                                        alt="Portrait of Jordan Storm"
+                                        fill
+                                        sizes="(max-width: 640px) 34vw, 8rem"
+                                        className="object-cover scale-120"
+                                    />
+                                </div>
+                                <p>
+                                    Jordan Storm founded Splitting Rabbits
+                                    in 2024 and currently works as a poet,
+                                    artist, and filmmaker earning her
+                                    Master of Arts in English at UC Irvine.
+                                </p>
+                            </AboutText>
+                            <AboutText className="mt-5">
+                                <p>
+                                    In 2026, she obtained her Bachelor of Arts
+                                    <em> summa cum laude</em> in Theatre, Film,
+                                    and Digital Production from UC Riverside.
+                                    Her artwork frequently focuses on themes
+                                    within punk music, interpersonal
+                                    relationships, and domestic life.
+                                </p>
+                            </AboutText>
+                        </div>
                     </div>
-                    <div className="relative aspect-[3/4] min-h-0 w-full max-w-[20rem] justify-self-center overflow-hidden bg-[#e7e7e7] lg:aspect-[323/548] lg:max-w-none">
+                    <div className="relative hidden aspect-[3/4] min-h-0 w-full max-w-[20rem] justify-self-center overflow-hidden bg-[#e7e7e7] lg:block lg:aspect-[323/548] lg:max-w-none">
                         <Image
                             src="/photos/about_portrait.jpg"
                             alt="Portrait of Jordan Storm"
